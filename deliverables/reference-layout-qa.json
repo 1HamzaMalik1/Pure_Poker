@@ -1,0 +1,44 @@
+[
+  {
+    "size": {
+      "width": 400,
+      "height": 870
+    },
+    "controls": "passed"
+  },
+  {
+    "size": {
+      "width": 668,
+      "height": 580
+    },
+    "controls": "passed"
+  },
+  {
+    "size": {
+      "width": 320,
+      "height": 480
+    },
+    "controls": "passed"
+  },
+  {
+    "size": {
+      "width": 390,
+      "height": 844
+    },
+    "controls": "passed"
+  },
+  {
+    "size": {
+      "width": 844,
+      "height": 390
+    },
+    "controls": "passed"
+  },
+  {
+    "size": {
+      "width": 1024,
+      "height": 768
+    },
+    "controls": "passed"
+  }
+]

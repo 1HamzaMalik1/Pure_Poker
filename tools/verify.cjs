@@ -1,0 +1,1 @@
+require('./verify-reference.cjs');

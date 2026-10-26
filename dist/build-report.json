@@ -1,0 +1,24 @@
+{
+  "builtAt": "2026-10-25T15:39:26.645Z",
+  "files": [
+    {
+      "file": "index.html",
+      "bytes": 3113850,
+      "scenario": "fullhouse"
+    },
+    {
+      "file": "pure-poker-straight.html",
+      "bytes": 3113849,
+      "scenario": "straight"
+    },
+    {
+      "file": "pure-poker-full-house.html",
+      "bytes": 3113850,
+      "scenario": "fullhouse"
+    }
+  ],
+  "externalAssets": 0,
+  "storeLinksConfigured": false,
+  "specification": "https://support.applovin.com/en/growth/promoting-your-apps/welcome-to-applovin/creative-specs-and-guidelines",
+  "releaseStatus": "Store links required before campaign upload"
+}

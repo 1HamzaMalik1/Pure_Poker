@@ -1,0 +1,16 @@
+{
+  "checks": [
+    {
+      "scenario": "straight",
+      "codec": "AAC",
+      "maxVolumeDb": 0,
+      "result": "pass"
+    },
+    {
+      "scenario": "full-house",
+      "codec": "AAC",
+      "maxVolumeDb": 0,
+      "result": "pass"
+    }
+  ]
+}

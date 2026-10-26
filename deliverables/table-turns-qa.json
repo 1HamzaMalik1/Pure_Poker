@@ -1,0 +1,66 @@
+[
+  {
+    "scenario": "straight",
+    "secondary": false,
+    "runs": 8,
+    "distinctActionSequences": 8,
+    "openingSeats": [
+      6,
+      4,
+      2,
+      0,
+      5
+    ],
+    "minOpponentTurns": 16,
+    "maxOpponentTurns": 23
+  },
+  {
+    "scenario": "straight",
+    "secondary": true,
+    "runs": 8,
+    "distinctActionSequences": 8,
+    "openingSeats": [
+      6,
+      4,
+      2,
+      0,
+      5
+    ],
+    "minOpponentTurns": 16,
+    "maxOpponentTurns": 33
+  },
+  {
+    "scenario": "fullhouse",
+    "secondary": false,
+    "runs": 8,
+    "distinctActionSequences": 8,
+    "openingSeats": [
+      6,
+      4,
+      2,
+      1,
+      3,
+      5,
+      7
+    ],
+    "minOpponentTurns": 20,
+    "maxOpponentTurns": 32
+  },
+  {
+    "scenario": "fullhouse",
+    "secondary": true,
+    "runs": 8,
+    "distinctActionSequences": 8,
+    "openingSeats": [
+      6,
+      4,
+      2,
+      1,
+      3,
+      5,
+      7
+    ],
+    "minOpponentTurns": 21,
+    "maxOpponentTurns": 38
+  }
+]

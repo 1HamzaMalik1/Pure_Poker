@@ -1,0 +1,61 @@
+[
+  {
+    "scenario": "straight",
+    "viewport": {
+      "width": 400,
+      "height": 870
+    },
+    "payments": 6,
+    "animatedSeats": [
+      8,
+      6,
+      4,
+      2,
+      0,
+      5
+    ],
+    "chipSprites": 42,
+    "potDestinations": true,
+    "remainingSprites": 0,
+    "errors": []
+  },
+  {
+    "scenario": "full-house",
+    "viewport": {
+      "width": 400,
+      "height": 870
+    },
+    "payments": 7,
+    "animatedSeats": [
+      8,
+      6,
+      4,
+      2,
+      3,
+      5,
+      7
+    ],
+    "chipSprites": 49,
+    "potDestinations": true,
+    "remainingSprites": 0,
+    "errors": []
+  },
+  {
+    "scenario": "straight",
+    "viewport": {
+      "width": 844,
+      "height": 390
+    },
+    "payments": 4,
+    "animatedSeats": [
+      8,
+      4,
+      0,
+      5
+    ],
+    "chipSprites": 28,
+    "potDestinations": true,
+    "remainingSprites": 0,
+    "errors": []
+  }
+]

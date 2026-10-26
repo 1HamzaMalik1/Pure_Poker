@@ -1,0 +1,115 @@
+{
+  "verified100PercentIdentical": false,
+  "scene": "Original Figma default table and wood background, scaled uniformly by height and centered to match the 1206x2622 reference aspect ratio.",
+  "originalFigmaAssets": [
+    "table",
+    "gold nameplate",
+    "purple nameplate",
+    "blue nameplate",
+    "base nameplate",
+    "logo mark",
+    "logo word",
+    "gray chip",
+    "hooded hero",
+    "ice character",
+    "dragon",
+    "skeleton",
+    "fish",
+    "shark",
+    "ape",
+    "Xio robot panda",
+    "cat",
+    "doctor",
+    "cyclops",
+    "knight",
+    "Spunk",
+    "Maya",
+    "Farah"
+  ],
+  "zipAssetsIntegrated": [
+    "52 original poker card faces",
+    "blue card back",
+    "Takashi avatar for jadenugly",
+    "Spunk avatar",
+    "Maya avatar",
+    "Xio robot panda avatar",
+    "Farah"
+  ],
+  "zipAssetProvenance": "assets/figma/zip-export/provenance.json",
+  "remainingVideoAvatarCrops": [],
+  "otherDifferences": [
+    "User-requested avatar substitutions remain.",
+    "Interactive rectangular decision controls replace replay transport controls.",
+    "OS status-bar UI is omitted.",
+    "Some visual motion details are not pixel/frame-identical.",
+    "Hero decisions wait for input; alternative decisions intentionally branch."
+  ],
+  "opponentBehavior": "Default reference path follows the recorded folds, calls, checks and wager amounts. Alternative user choices enter varied betting. Every action remains visible in seat order.",
+  "curatedCards": "Full house: K\u2665 4\u2660 8\u2663 5\u2666 8\u2665, with river after all-in calls and reveal. Straight: 9\u2666 J\u2665 10\u2660 Q\u2663, then a fold win with an unrevealed rabbit card; no revealed 2\u2663 on the reference path.",
+  "branchValidation": "deliverables/reference-gameplay-qa.json",
+  "figmaSession": "c6f65045-1098-4773-9936-2d474762a678",
+  "figmaExportLimitation": "All displayed avatars use original exported artwork. Spunk, Maya, Xio and Farah are selected ZIP replacements.",
+  "campaignInputsStillRequired": [
+    "Actual App Store and Google Play URLs",
+    "Authorized AppLovin preview upload and actual device validation"
+  ],
+  "avatarReplacements": [
+    {
+      "seat": "socal8god",
+      "art": "Spunk",
+      "source": "Pure GamePlay Ad.zip/Spunk Table 2.png"
+    },
+    {
+      "seat": "xotiicpoker",
+      "art": "Maya",
+      "source": "Pure GamePlay Ad.zip/maya_top.png"
+    },
+    {
+      "seat": "Brinley",
+      "art": "Xio robot panda",
+      "source": "Pure GamePlay Ad.zip/xio_top.png",
+      "replaces": "Black-and-white lower-left avatar"
+    },
+    {
+      "seat": "tinyhiny",
+      "art": "Farah",
+      "source": "Pure GamePlay Ad.zip/Farah 3.png",
+      "replaces": "Duplicate of the hero hooded avatar"
+    }
+  ],
+  "openingLiveOpponents": {
+    "straight": 5,
+    "fullhouse": 7
+  },
+  "chipAnimation": "Positive contributions move from the acting seat to its wager position. Wagers gather into the bank between streets, and winnings move from bank to hero.",
+  "chipAnimationReview": "deliverables/chip-animation-review.json",
+  "defaultHand": "fullhouse",
+  "frameAudit": {
+    "fullhouseFrames": 2626,
+    "straightFrames": 1217,
+    "report": "deliverables/reference-frame-audit.md",
+    "timing": "Approximate recording times transcribed from 60 fps frame indices; interactive hero pauses can extend wall time."
+  },
+  "referenceAssets": [
+    "Rabbit-card crop extracted from the supplied straight video."
+  ],
+  "uniqueAvatarsPerHand": 9,
+  "cardFlip": "Two-sided back-to-face card animation for every community deal and opponent showdown reveal.",
+  "audio": {
+    "source": "WhatsApp Video 2026-10-25 at 1.15.25 PM.mp4",
+    "effects": [
+      "fold",
+      "chip",
+      "gather",
+      "card",
+      "check",
+      "win"
+    ],
+    "provenance": "assets/audio/provenance.json",
+    "backgroundMusic": "No continuous music detected; source game effects retained.",
+    "start": "After first play interaction",
+    "muteAndHostPause": "Verified"
+  },
+  "settingsButton": "Removed from markup and handlers",
+  "motionAndSoundValidation": "deliverables/flips-audio-qa.json"
+}

@@ -1,0 +1,8 @@
+const fs=require('fs'),path=require('path');const sharp=require('C:/Users/Ayesha Munir/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');
+(async()=>{const root=path.resolve(__dirname,'..'),out=path.join(root,'assets/optimized');fs.mkdirSync(out,{recursive:true});const raw=path.join(root,'reference-analysis/figma');const list=JSON.parse(fs.readFileSync(path.join(raw,'downloaded.json'),'utf8'));const map={avatar_hero:88,avatar_ice:89,avatar_dragon:50,avatar_skull:51,avatar_deer:90,avatar_fish:54,avatar_shark:6,avatar_ape:22,avatar_cat:41,avatar_cyclops:95,avatar_knight:62};
+for(const [name,i] of Object.entries(map))await sharp(path.join(raw,list[i].file)).resize({width:320}).webp({quality:92,alphaQuality:100}).toFile(path.join(out,name+'.webp'));
+for(const [name,file] of Object.entries({table:'table.png',plate_gold:'plate-gold-0.png',plate_purple:'plate-purple-0.png',plate_blue:'plate-blue-0.png',plate_base:'plate-base-0.png',avatar_doctor:'humans-1.png',chip:'chip-0.png'})){await sharp(path.join(root,'assets/figma',file)).resize({width:name==='table'?1653:name==='avatar_doctor'?320:400}).webp({quality:name==='table'?94:96,alphaQuality:100}).toFile(path.join(out,name+'.webp'));}
+for(const [name,file] of [['logo_mark','table-logo-0.svg'],['logo_word','table-logo-1.svg']])fs.copyFileSync(path.join(root,'assets/figma',file),path.join(out,name+'.svg'));
+// Run tools/prepare-zip-art.py afterwards for cards, Takashi, Spunk, Maya and Xio.
+console.log('Prepared retrieved Figma assets. The runtime uses ZIP exports for the three replacement seats.');
+})().catch(e=>{console.error(e);process.exit(1)});

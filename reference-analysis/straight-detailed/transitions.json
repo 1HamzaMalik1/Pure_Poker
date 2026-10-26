@@ -1,0 +1,191 @@
+{
+  "pot": [
+    {
+      "startFrame": 388,
+      "endFrame": 388,
+      "start": 6.467,
+      "end": 6.467,
+      "reviewFrame": 400
+    },
+    {
+      "startFrame": 402,
+      "endFrame": 429,
+      "start": 6.7,
+      "end": 7.15,
+      "reviewFrame": 441
+    },
+    {
+      "startFrame": 824,
+      "endFrame": 824,
+      "start": 13.733,
+      "end": 13.733,
+      "reviewFrame": 836
+    },
+    {
+      "startFrame": 946,
+      "endFrame": 971,
+      "start": 15.767,
+      "end": 16.183,
+      "reviewFrame": 983
+    },
+    {
+      "startFrame": 988,
+      "endFrame": 988,
+      "start": 16.467,
+      "end": 16.467,
+      "reviewFrame": 1000
+    },
+    {
+      "startFrame": 1012,
+      "endFrame": 1045,
+      "start": 16.867,
+      "end": 17.417,
+      "reviewFrame": 1057
+    }
+  ],
+  "hero": [
+    {
+      "startFrame": 824,
+      "endFrame": 824,
+      "start": 13.733,
+      "end": 13.733,
+      "reviewFrame": 836
+    },
+    {
+      "startFrame": 1053,
+      "endFrame": 1053,
+      "start": 17.55,
+      "end": 17.55,
+      "reviewFrame": 1065
+    }
+  ],
+  "girl": [],
+  "asian": [
+    {
+      "startFrame": 269,
+      "endFrame": 270,
+      "start": 4.483,
+      "end": 4.5,
+      "reviewFrame": 282
+    },
+    {
+      "startFrame": 388,
+      "endFrame": 388,
+      "start": 6.467,
+      "end": 6.467,
+      "reviewFrame": 400
+    }
+  ],
+  "board": [
+    {
+      "startFrame": 400,
+      "endFrame": 455,
+      "start": 6.667,
+      "end": 7.583,
+      "reviewFrame": 467
+    },
+    {
+      "startFrame": 628,
+      "endFrame": 644,
+      "start": 10.467,
+      "end": 10.733,
+      "reviewFrame": 656
+    },
+    {
+      "startFrame": 944,
+      "endFrame": 969,
+      "start": 15.733,
+      "end": 16.15,
+      "reviewFrame": 981
+    },
+    {
+      "startFrame": 1020,
+      "endFrame": 1040,
+      "start": 17.0,
+      "end": 17.333,
+      "reviewFrame": 1052
+    }
+  ],
+  "reveal": [
+    {
+      "startFrame": 388,
+      "endFrame": 416,
+      "start": 6.467,
+      "end": 6.933,
+      "reviewFrame": 428
+    },
+    {
+      "startFrame": 805,
+      "endFrame": 824,
+      "start": 13.417,
+      "end": 13.733,
+      "reviewFrame": 836
+    },
+    {
+      "startFrame": 930,
+      "endFrame": 959,
+      "start": 15.5,
+      "end": 15.983,
+      "reviewFrame": 971
+    },
+    {
+      "startFrame": 1018,
+      "endFrame": 1099,
+      "start": 16.967,
+      "end": 18.317,
+      "reviewFrame": 1111
+    }
+  ],
+  "fold6": [
+    {
+      "startFrame": 1,
+      "endFrame": 7,
+      "start": 0.017,
+      "end": 0.117,
+      "reviewFrame": 19
+    }
+  ],
+  "fold4": [
+    {
+      "startFrame": 86,
+      "endFrame": 100,
+      "start": 1.433,
+      "end": 1.667,
+      "reviewFrame": 112
+    }
+  ],
+  "fold2": [
+    {
+      "startFrame": 177,
+      "endFrame": 192,
+      "start": 2.95,
+      "end": 3.2,
+      "reviewFrame": 204
+    },
+    {
+      "startFrame": 917,
+      "endFrame": 917,
+      "start": 15.283,
+      "end": 15.283,
+      "reviewFrame": 929
+    }
+  ],
+  "fold0": [
+    {
+      "startFrame": 269,
+      "endFrame": 284,
+      "start": 4.483,
+      "end": 4.733,
+      "reviewFrame": 296
+    },
+    {
+      "startFrame": 917,
+      "endFrame": 917,
+      "start": 15.283,
+      "end": 15.283,
+      "reviewFrame": 929
+    }
+  ],
+  "fold1": [],
+  "fold7": []
+}

@@ -1,0 +1,395 @@
+{
+  "pot": [
+    {
+      "startFrame": 470,
+      "endFrame": 470,
+      "start": 7.833,
+      "end": 7.833,
+      "reviewFrame": 482
+    },
+    {
+      "startFrame": 588,
+      "endFrame": 588,
+      "start": 9.8,
+      "end": 9.8,
+      "reviewFrame": 600
+    },
+    {
+      "startFrame": 696,
+      "endFrame": 722,
+      "start": 11.6,
+      "end": 12.033,
+      "reviewFrame": 734
+    },
+    {
+      "startFrame": 933,
+      "endFrame": 933,
+      "start": 15.55,
+      "end": 15.55,
+      "reviewFrame": 945
+    },
+    {
+      "startFrame": 1050,
+      "endFrame": 1050,
+      "start": 17.5,
+      "end": 17.5,
+      "reviewFrame": 1062
+    },
+    {
+      "startFrame": 1169,
+      "endFrame": 1169,
+      "start": 19.483,
+      "end": 19.483,
+      "reviewFrame": 1181
+    },
+    {
+      "startFrame": 1183,
+      "endFrame": 1210,
+      "start": 19.717,
+      "end": 20.167,
+      "reviewFrame": 1222
+    },
+    {
+      "startFrame": 1422,
+      "endFrame": 1422,
+      "start": 23.7,
+      "end": 23.7,
+      "reviewFrame": 1434
+    },
+    {
+      "startFrame": 1539,
+      "endFrame": 1539,
+      "start": 25.65,
+      "end": 25.65,
+      "reviewFrame": 1551
+    },
+    {
+      "startFrame": 1657,
+      "endFrame": 1657,
+      "start": 27.617,
+      "end": 27.617,
+      "reviewFrame": 1669
+    },
+    {
+      "startFrame": 1775,
+      "endFrame": 1775,
+      "start": 29.583,
+      "end": 29.583,
+      "reviewFrame": 1787
+    },
+    {
+      "startFrame": 1891,
+      "endFrame": 1891,
+      "start": 31.517,
+      "end": 31.517,
+      "reviewFrame": 1903
+    },
+    {
+      "startFrame": 2010,
+      "endFrame": 2010,
+      "start": 33.5,
+      "end": 33.5,
+      "reviewFrame": 2022
+    },
+    {
+      "startFrame": 2039,
+      "endFrame": 2065,
+      "start": 33.983,
+      "end": 34.417,
+      "reviewFrame": 2077
+    },
+    {
+      "startFrame": 2277,
+      "endFrame": 2277,
+      "start": 37.95,
+      "end": 37.95,
+      "reviewFrame": 2289
+    },
+    {
+      "startFrame": 2308,
+      "endFrame": 2329,
+      "start": 38.467,
+      "end": 38.817,
+      "reviewFrame": 2341
+    }
+  ],
+  "hero": [
+    {
+      "startFrame": 933,
+      "endFrame": 933,
+      "start": 15.55,
+      "end": 15.55,
+      "reviewFrame": 945
+    },
+    {
+      "startFrame": 1422,
+      "endFrame": 1422,
+      "start": 23.7,
+      "end": 23.7,
+      "reviewFrame": 1434
+    },
+    {
+      "startFrame": 1631,
+      "endFrame": 1632,
+      "start": 27.183,
+      "end": 27.2,
+      "reviewFrame": 1644
+    },
+    {
+      "startFrame": 1775,
+      "endFrame": 1775,
+      "start": 29.583,
+      "end": 29.583,
+      "reviewFrame": 1787
+    },
+    {
+      "startFrame": 2344,
+      "endFrame": 2344,
+      "start": 39.067,
+      "end": 39.067,
+      "reviewFrame": 2356
+    }
+  ],
+  "girl": [
+    {
+      "startFrame": 470,
+      "endFrame": 470,
+      "start": 7.833,
+      "end": 7.833,
+      "reviewFrame": 482
+    },
+    {
+      "startFrame": 1050,
+      "endFrame": 1050,
+      "start": 17.5,
+      "end": 17.5,
+      "reviewFrame": 1062
+    },
+    {
+      "startFrame": 1396,
+      "endFrame": 1397,
+      "start": 23.267,
+      "end": 23.283,
+      "reviewFrame": 1409
+    },
+    {
+      "startFrame": 1539,
+      "endFrame": 1539,
+      "start": 25.65,
+      "end": 25.65,
+      "reviewFrame": 1551
+    },
+    {
+      "startFrame": 1891,
+      "endFrame": 1891,
+      "start": 31.517,
+      "end": 31.517,
+      "reviewFrame": 1903
+    }
+  ],
+  "asian": [
+    {
+      "startFrame": 588,
+      "endFrame": 588,
+      "start": 9.8,
+      "end": 9.8,
+      "reviewFrame": 600
+    },
+    {
+      "startFrame": 1025,
+      "endFrame": 1026,
+      "start": 17.083,
+      "end": 17.1,
+      "reviewFrame": 1038
+    },
+    {
+      "startFrame": 1169,
+      "endFrame": 1169,
+      "start": 19.483,
+      "end": 19.483,
+      "reviewFrame": 1181
+    },
+    {
+      "startFrame": 1303,
+      "endFrame": 1303,
+      "start": 21.717,
+      "end": 21.717,
+      "reviewFrame": 1315
+    },
+    {
+      "startFrame": 1657,
+      "endFrame": 1657,
+      "start": 27.617,
+      "end": 27.617,
+      "reviewFrame": 1669
+    },
+    {
+      "startFrame": 2010,
+      "endFrame": 2010,
+      "start": 33.5,
+      "end": 33.5,
+      "reviewFrame": 2022
+    }
+  ],
+  "board": [
+    {
+      "startFrame": 694,
+      "endFrame": 748,
+      "start": 11.567,
+      "end": 12.467,
+      "reviewFrame": 760
+    },
+    {
+      "startFrame": 1182,
+      "endFrame": 1207,
+      "start": 19.7,
+      "end": 20.117,
+      "reviewFrame": 1219
+    },
+    {
+      "startFrame": 1226,
+      "endFrame": 1241,
+      "start": 20.433,
+      "end": 20.683,
+      "reviewFrame": 1253
+    },
+    {
+      "startFrame": 2037,
+      "endFrame": 2062,
+      "start": 33.95,
+      "end": 34.367,
+      "reviewFrame": 2074
+    },
+    {
+      "startFrame": 2136,
+      "endFrame": 2138,
+      "start": 35.6,
+      "end": 35.633,
+      "reviewFrame": 2150
+    },
+    {
+      "startFrame": 2217,
+      "endFrame": 2217,
+      "start": 36.95,
+      "end": 36.95,
+      "reviewFrame": 2229
+    },
+    {
+      "startFrame": 2252,
+      "endFrame": 2262,
+      "start": 37.533,
+      "end": 37.7,
+      "reviewFrame": 2274
+    },
+    {
+      "startFrame": 2326,
+      "endFrame": 2326,
+      "start": 38.767,
+      "end": 38.767,
+      "reviewFrame": 2338
+    }
+  ],
+  "reveal": [
+    {
+      "startFrame": 681,
+      "endFrame": 710,
+      "start": 11.35,
+      "end": 11.833,
+      "reviewFrame": 722
+    },
+    {
+      "startFrame": 915,
+      "endFrame": 933,
+      "start": 15.25,
+      "end": 15.55,
+      "reviewFrame": 945
+    },
+    {
+      "startFrame": 1169,
+      "endFrame": 1198,
+      "start": 19.483,
+      "end": 19.967,
+      "reviewFrame": 1210
+    },
+    {
+      "startFrame": 1403,
+      "endFrame": 1422,
+      "start": 23.383,
+      "end": 23.7,
+      "reviewFrame": 1434
+    },
+    {
+      "startFrame": 1755,
+      "endFrame": 1775,
+      "start": 29.25,
+      "end": 29.583,
+      "reviewFrame": 1787
+    },
+    {
+      "startFrame": 2024,
+      "endFrame": 2053,
+      "start": 33.733,
+      "end": 34.217,
+      "reviewFrame": 2065
+    },
+    {
+      "startFrame": 2091,
+      "endFrame": 2099,
+      "start": 34.85,
+      "end": 34.983,
+      "reviewFrame": 2111
+    },
+    {
+      "startFrame": 2308,
+      "endFrame": 2341,
+      "start": 38.467,
+      "end": 39.017,
+      "reviewFrame": 2353
+    }
+  ],
+  "fold6": [
+    {
+      "startFrame": 77,
+      "endFrame": 90,
+      "start": 1.283,
+      "end": 1.5,
+      "reviewFrame": 102
+    }
+  ],
+  "fold4": [
+    {
+      "startFrame": 169,
+      "endFrame": 183,
+      "start": 2.817,
+      "end": 3.05,
+      "reviewFrame": 195
+    }
+  ],
+  "fold2": [
+    {
+      "startFrame": 260,
+      "endFrame": 275,
+      "start": 4.333,
+      "end": 4.583,
+      "reviewFrame": 287
+    }
+  ],
+  "fold1": [
+    {
+      "startFrame": 353,
+      "endFrame": 367,
+      "start": 5.883,
+      "end": 6.117,
+      "reviewFrame": 379
+    }
+  ],
+  "fold7": [
+    {
+      "startFrame": 682,
+      "endFrame": 694,
+      "start": 11.367,
+      "end": 11.567,
+      "reviewFrame": 706
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-25T15:42:27.643Z",
+  "cardFlip": {
+    "startsWithBack": true,
+    "twoSided": true,
+    "endsFaceUp": true,
+    "transforms": [
+      "matrix3d(-1, 0, 0, 0, 0, 1, 0, 0, 0, 0, -1, 0, 0, 0, 0, 1)",
+      "matrix3d(0.268357, 0, -0.96332, 0, 0, 1, 0, 0, 0.96332, 0, 0.268357, 0, 0, 0, 0, 1)",
+      "matrix(1, 0, 0, 1, 0, 0)"
+    ]
+  },
+  "audio": {
+    "source": "Supplied reference recording",
+    "decodedEffects": 6,
+    "measuredOutputRms": 0.10081203467842398,
+    "muting": "pass",
+    "hiddenPauseResume": "pass",
+    "startsAfterInteraction": "pass"
+  },
+  "settingsRemoved": true,
+  "uniqueAvatars": 9,
+  "errors": []
+}

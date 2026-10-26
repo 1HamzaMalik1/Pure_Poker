@@ -1,0 +1,23 @@
+[
+  {
+    "scenario": "straight",
+    "zipReplacements": [
+      "avatar_panda"
+    ],
+    "referenceAvatarCrops": 0,
+    "loaded": true,
+    "portraitAndLandscape": "checked",
+    "firstAction": "pass"
+  },
+  {
+    "scenario": "full-house",
+    "zipReplacements": [
+      "avatar_spunk",
+      "avatar_maya"
+    ],
+    "referenceAvatarCrops": 0,
+    "loaded": true,
+    "portraitAndLandscape": "checked",
+    "firstAction": "pass"
+  }
+]

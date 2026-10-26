@@ -1,0 +1,11 @@
+{
+  "source": "IMG_3768.mp4",
+  "extractedFrame": "reference-analysis/IMG_3768-10.jpg",
+  "crop": [
+    825,
+    1096,
+    136,
+    174
+  ],
+  "purpose": "Unrevealed rabbit card after the opponent folds on the turn; not a dealt river card"
+}

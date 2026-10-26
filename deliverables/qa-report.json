@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-25T15:40:49.504Z",
+  "checks": [
+    {
+      "scenario": "full-house",
+      "referenceSequence": "pass",
+      "amounts": "pass",
+      "riverAndPayout": "pass",
+      "result": "pass"
+    },
+    {
+      "scenario": "straight",
+      "referenceSequence": "pass",
+      "amounts": "pass",
+      "riverAndPayout": "pass",
+      "result": "pass"
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 480
+      },
+      "controls": "pass",
+      "result": "pass"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "controls": "pass",
+      "result": "pass"
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "controls": "pass",
+      "result": "pass"
+    },
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "controls": "pass",
+      "result": "pass"
+    },
+    {
+      "scenario": "full-house",
+      "alternativeBranch": "pass",
+      "result": "pass"
+    },
+    {
+      "scenario": "straight",
+      "alternativeBranch": "pass",
+      "result": "pass"
+    },
+    {
+      "alternativeAt": "flop-bet",
+      "action": "Check",
+      "accounting": "pass",
+      "result": "pass"
+    },
+    {
+      "alternativeAt": "turn-all-in",
+      "action": "Call the raise",
+      "accounting": "pass",
+      "result": "pass"
+    },
+    {
+      "mraid": "ready, hidden pause, resume, no first-tap redirect",
+      "result": "pass"
+    }
+  ],
+  "pending": [
+    "Actual store URLs",
+    "AppLovin host/device validation",
+    "Pixel-identical art and motion not claimed"
+  ]
+}

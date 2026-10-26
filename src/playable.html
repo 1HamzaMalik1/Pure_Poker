@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="ad.size" content="width=400,height=870">
+<title>Pure Poker · Your next great hand</title>
+<style>__REFERENCE_CSS__</style>
+</head>
+<body>
+<div id="loading" role="status"><b>PURE POKER</b><i></i><span style="font-size:9px">SETTING YOUR TABLE</span></div>
+<main id="stage" aria-label="Pure Poker playable demo">
+ <header><button class="sound" id="sound" aria-label="Turn sound on" aria-pressed="false"></button></header>
+ <div class="intro"><h1 id="headline"></h1><span id="round-label"></span></div>
+ <section class="arena" aria-label="Nine-seat poker table">
+  <div class="rail" data-figma-node="26:190"></div>
+  <div class="scene-logo" aria-label="Pure"><div class="logo-mark"><img src="@@logo_mark@@" alt=""></div><div class="logo-word"><img src="@@logo_word@@" alt="Pure"></div></div><div class="nlh">NLH</div><div class="stakes">$0.5/$1</div>
+  <div id="seats"></div>
+  <div class="pot"><small>Total Pot</small><strong id="pot">7.5</strong></div><div class="pot-secondary" id="pot-secondary"><img src="@@chip@@" alt=""><span></span></div>
+  <div class="board" id="board" aria-label="Community cards"></div><div class="hand-name" id="hand-name" aria-live="polite"></div>
+  <div class="seat hero-seat gold"><div class="avatar"><img src="@@avatar_hero@@" alt="Your hooded poker avatar"></div><span class="level" id="hero-level">32</span><div class="plate"><img class="plate-art" src="@@plate_gold@@" alt=""><b>ysj</b><span id="stack">483.25</span></div></div>
+  <div class="hole" id="hole" aria-label="Your hole cards"></div><div id="hero-hand-label" class="hero-hand-label"></div><div id="bets"></div><div id="effects"></div>
+ </section>
+ <section class="actions" aria-label="Poker actions"><div id="instruction" class="instruction" aria-live="polite"></div><div class="buttons"><button class="action" id="fold">Fold</button><button class="action primary nudge" id="primary">Play</button><button class="action" id="secondary">Raise</button></div></section>
+ <div class="footer">PLAYABLE DEMO · VIRTUAL CHIPS</div><div class="toast hidden" id="toast" role="status"></div>
+ <section class="end hidden" id="end" aria-label="Hand complete"><h2 id="end-title"></h2><p id="end-copy"></p><div class="end-result" id="end-result"></div><button class="install" id="install">Play Pure Poker</button><button class="replay" id="replay">Play another hand</button></section>
+</main>
+<script>
+/* Build configuration: set real store destinations in creative.config.json. */
+const CONFIG=__CONFIG__;
+const CARD_ASSETS=__CARD_ASSETS__;
+const CARD_BACK="@@card_back@@",SOUND_ASSETS=__SOUND_ASSETS__;
+const ASSETS={ice:"@@avatar_ice@@",skull:"@@avatar_skull@@",dragon:"@@avatar_dragon@@",man:"@@avatar_man@@",shark:"@@avatar_shark@@",ape:"@@avatar_ape@@",panda:"@@avatar_panda@@",fish:"@@avatar_fish@@",spunk:"@@avatar_spunk@@",cat:"@@avatar_cat@@",maya:"@@avatar_maya@@",doctor:"@@avatar_doctor@@",cyclops:"@@avatar_cyclops@@",farah:"@@avatar_farah@@",knight:"@@avatar_knight@@"};
+const PLATES={gold:"@@plate_gold@@",purple:"@@plate_purple@@",blue:"@@plate_blue@@",base:"@@plate_base@@"},CHIP="@@chip@@";
+(function(){
+ 'use strict';
+ const scenarios={straight:{name:'Broadway straight',hole:['As','Kh'],board:['9d','Jh','Ts','Qc','2c'],pot:7.5,stack:483.25,call:2,bet:2.5,win:'STRAIGHT',end:'A little nerve.<br>A perfect straight.',names:['sharkfish','setovrset','El_foolosopher','jadenugly','HandyManny','AAinagas','Brinley','Jerm89'],stacks:[265.5,208,316.52,304.5,665.97,221,261,42],best:[1,2,3]},fullhouse:{name:'Kings full of eights',hole:['Ks','Kd'],board:['Kh','4s','8c','5d','8h'],pot:4.5,stack:141,call:3,bet:10,win:'FULL HOUSE',end:'Big decisions.<br>Even bigger hands.',names:['socal8god','PlutoPoker','JamesB0nd','xotiicpoker','rubo','Asianchad','tinyhiny','givengo440'],stacks:[50,61,96,101.5,142,384.5,108,176],best:[0,2,4]}};
+ const initialStacks={straight:[265.5,208,316.52,304.5,665.97,221,261,42],fullhouse:[50,61,96,101.5,142,384.5,108,176]};
+ const symbols={s:'♠',h:'♥',d:'♦',c:'♣'},colors={s:'',h:'red',d:'blue',c:'green'};
+ let m=null,ready=false,started=false,visible=true,muted=true,audio=null,busy=false,stage=0,current=CONFIG.scenario,hand=scenarios[current],pot=hand.pot,stack=hand.stack,invested=0,folded=false,ended=false,clock=0,lastFrame=0,firstTapAt=0,handNumber=1;
+ const jobs=[];let ui={};
+ function fmt(n){return Number(n.toFixed(2)).toString();}
+ function schedule(fn,delay){jobs.push({fn,at:clock+delay});}
+ function ticker(t){if(lastFrame&&started&&visible&&!ended)clock+=Math.min(t-lastFrame,100);lastFrame=t;if(visible){for(let i=jobs.length-1;i>=0;i--){if(clock>=jobs[i].at){const job=jobs.splice(i,1)[0];job.fn();}}}requestAnimationFrame(ticker);}
+ function card(value,cls=''){const c=document.createElement('div');c.className='card '+cls;if(!value){c.classList.add('empty');c.setAttribute('aria-label','Unrevealed community card');return c;}const rank=value.slice(0,-1).replace('T','10'),suit=value.slice(-1);c.classList.add(colors[suit]||'black');c.setAttribute('aria-label',rank+' of '+({s:'spades',h:'hearts',d:'diamonds',c:'clubs'}[suit]));c.innerHTML='<div class="card-inner"><img class="card-art" src="'+CARD_ASSETS[value]+'" alt=""><img class="card-back-art" src="'+CARD_BACK+'" alt=""></div>';return c;}
+ function renderBoard(count,animate=true){const previous=ui.board.querySelectorAll('.card:not(.empty)').length;ui.board.replaceChildren();for(let i=0;i<5;i++){const fresh=i<count&&i>=previous&&animate;const c=card(i<count?hand.board[i]:null,fresh?'deal':'');if(fresh)c.style.animationDelay=((i-previous)*.08)+'s';ui.board.appendChild(c);}}
+ function renderSeats(){const keys=current==='straight'?['ice','skull','dragon','man','shark','ape','panda','fish']:['spunk','ice','cat','maya','doctor','cyclops','farah','knight'];const colors=current==='straight'?['gold','purple','purple','blue','blue','blue','gold','purple']:['blue','gold','blue','base','blue','gold','gold','purple'];const levels=current==='straight'?[30,33,74,17,40,50,25,44]:['',40,8,31,54,30,28,51];const foldedAtStart=INITIAL_FOLDED[current];ui.seats.innerHTML=keys.map((key,i)=>'<div class="seat s'+i+' '+colors[i]+(foldedAtStart.includes(i)?' folded':'')+'" data-seat="'+i+'"><div class="avatar '+(['shark','ape','cat','cyclops','knight','spunk','maya','panda','farah'].includes(key)?'half':'')+'"><img src="'+ASSETS[key]+'" alt="'+hand.names[i]+'"></div><span class="fold-status">Folded</span><div class="backs"><i></i><i></i></div>'+(levels[i]!==''?'<span class="level">'+levels[i]+'</span>':'')+'<div class="plate"><img class="plate-art" src="'+PLATES[colors[i]]+'" alt=""><b>'+hand.names[i]+'</b><span>'+fmt(hand.stacks[i])+'</span></div>'+((current==='straight'&&i===4)||(current==='fullhouse'&&i===3)?'<div class="dealer" style="'+(i===4?'left:86px;top:22px':'left:-8px;top:0')+'">D</div>':'')+(current==='straight'&&i===0?'<div class="blind">BB</div>':'')+'</div>').join('');document.getElementById('hero-level').textContent=current==='straight'?'32':'29';}
+ function bubble(i,text,hold=1500){const s=ui.seats.querySelector('[data-seat="'+i+'"]');const old=s.querySelector('.bubble');if(old)old.remove();const el=document.createElement('span');el.className='bubble '+(text.startsWith('Call')?'call':text==='All in'?'allin':text==='Fold'?'fold':text==='Raise'?'raise':text==='Bet'?'bet':'');el.textContent=text;s.appendChild(el);schedule(()=>el.remove(),hold);}
+
+ function chips(collect=false,seat=8,mode='wager'){
+  const player=seat===8?document.querySelector('.hero-seat'):ui.seats.querySelector('[data-seat="'+seat+'"]');
+  if(!player)return;
+  const playerStyle=getComputedStyle(player);
+  const playerPoint={x:parseFloat(playerStyle.left),y:parseFloat(playerStyle.top)+(seat===8?113:95)};
+  const betPoints={0:[139,239],1:[261,239],2:[110,321],3:[289,321],4:[110,496],5:[289,496],6:[121,595],7:[273,574],8:[200,587]};
+  const betPoint={x:betPoints[seat][0],y:betPoints[seat][1]},potPoint={x:200,y:295};
+  const from=collect?potPoint:mode==='gather'?betPoint:playerPoint,to=collect?playerPoint:mode==='gather'?potPoint:betPoint;
+  const count=collect?7:3;
+  for(let i=0;i<count;i++){
+   const el=document.createElement('i');el.className='chip '+(collect?'collect':mode==='gather'?'gather':'fly');
+   el.dataset.seat=String(seat);el.dataset.transfer=collect?'award':mode;el.setAttribute('aria-hidden','true');
+   el.style.left=(from.x-8.5)+'px';el.style.top=(from.y-8)+'px';
+   el.style.setProperty('--to-x',(to.x-from.x+(i%3-1)*5)+'px');
+   el.style.setProperty('--to-y',(to.y-from.y+Math.floor(i/3)*3)+'px');
+   el.style.animationDelay=(i*.015)+'s';ui.effects.appendChild(el);schedule(()=>el.remove(),collect?1000:750);
+  }
+ }
+ function confetti(){for(let i=0;i<35;i++){const el=document.createElement('i');el.className='confetti';el.style.setProperty('--dx',(Math.sin(i*2.4)*170)+'px');el.style.setProperty('--dy',(90+(i%6)*45)+'px');el.style.setProperty('--rot',(i*63)+'deg');el.style.animationDelay=(i*.025)+'s';if(i%3===0)el.style.background='#e9e8c7';ui.effects.appendChild(el);schedule(()=>el.remove(),2800);}}
+ __AUDIO_SCRIPT__
+ function updateSound(){ui.sound.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 5 6 9H3v6h3l5 4V5Z"/>'+(muted?'<path d="m16 9 6 6m0-6-6 6"/>':'<path d="M15 8c3 2 3 6 0 8m3-11c5 4 5 10 0 14"/>')+'</svg>';ui.sound.setAttribute('aria-label',muted?'Turn sound on':'Turn sound off');ui.sound.setAttribute('aria-pressed',String(!muted));}
+ function start(){if(!started){started=true;firstTapAt=performance.now();ui.primary.classList.remove('nudge');firstTapAudio();}}
+ function sync(){const bets=settled?[]:Object.entries(roundPaid).filter(([,n])=>n>0).map(([seat,n])=>[seat==='8'?'hero-bet':'bet-seat'+seat,fmt(n)]);document.getElementById('bets').innerHTML=bets.map(([cls,amount])=>'<div class="table-bet '+cls+'"><img src="'+CHIP+'" alt="">'+amount+'</div>').join('');ui.pot.textContent=fmt(pot);ui.stack.textContent=fmt(stack);ui.roundLabel.textContent=['PREFLOP','FLOP','TURN','RIVER'][Math.min(stage,3)];const row=document.getElementById('pot-secondary');row.classList.toggle('visible',refActive?bankPot>0:stage>0);row.querySelector('span').textContent=fmt(refActive?bankPot:pot);}
+
+ function lock(){busy=true;ui.fold.disabled=ui.primary.disabled=ui.secondary.disabled=true;ui.instruction.textContent='The table is thinking…';}
+
+
+
+ __OPPONENT_SCRIPT__
+ __REFERENCE_SCRIPT__
+ function showdown(){clearTurn();settled=true;hand.best.forEach(i=>ui.board.children[i].classList.add('best'));Array.from(ui.board.children).forEach((c,i)=>{if(!hand.best.includes(i))c.classList.add('dim');});Array.from(ui.hole.children).forEach(c=>c.classList.add('best'));ui.handName.className='hand-name win';ui.handName.textContent=hand.win;ui.instruction.textContent='You win';ui.roundLabel.textContent='SHOWDOWN';chips(true);tone('win');if(current==='fullhouse'){for(const [seat,cards] of [[3,['7d','6d']],[5,['4h','4c']]]){if(!active.includes(seat))continue;const el=document.createElement('div');el.className='opponent-hole';el.append(...cards.map(v=>card(v,'flip')));ui.seats.querySelector('[data-seat="'+seat+'"]').appendChild(el);}}const label=document.createElement('div');label.className='win-amount';label.textContent='+'+fmt(pot);ui.effects.appendChild(label);stack+=pot;sync();schedule(()=>finish(false),2200);}
+ function finish(isFold){clearTurn();document.querySelector('.actions').classList.add('hidden');if(isFold)ui.handName.textContent='Folded';ended=true;busy=false;ui.end.classList.remove('hidden');ui.endTitle.innerHTML=isFold?'Every fold.<br>A fresh start.':hand.end;ui.endCopy.innerHTML=isFold?'Knowing when to fold is part of the game.<br>Your next hand is waiting.':'Read the table. Make your move.<br>Find your next great hand.';ui.endResult.textContent=isFold?'HAND FOLDED · TRY AGAIN':(active.length?hand.win:'YOU WIN')+' · '+fmt(pot)+' CHIP POT';ui.replay.textContent=isFold?'Try this hand again':'Play again';}
+ function reset(next){stopSounds();jobs.length=0;current=next;hand=scenarios[current];hand.stacks=initialStacks[current].slice();document.querySelector(".actions").classList.remove("hidden");started=false;clock=0;lastFrame=0;busy=false;ended=false;folded=false;stage=0;pot=hand.pot;stack=hand.stack;invested=0;chooseProfile();ui.end.classList.add('hidden');ui.toast.classList.add('hidden');ui.effects.replaceChildren();ui.handName.className='hand-name';ui.handName.textContent='';ui.headline.innerHTML=current==='straight'?'One hand. <em>All possibility.</em>':'Pocket kings. <em>Your call.</em>';renderSeats();renderBoard(0,false);ui.hole.replaceChildren(...hand.hole.map(v=>card(v)));setActions();ui.primary.classList.add('nudge');}
+ function toast(text){ui.toast.textContent=text;ui.toast.classList.remove('hidden');/* No automatic redirect from a preview. */}
+ function install(){if(!started||performance.now()-firstTapAt<500)return;const ios=/iPhone|iPad|iPod/.test(navigator.userAgent),url=ios?(CONFIG.iosStoreUrl||CONFIG.androidStoreUrl):(CONFIG.androidStoreUrl||CONFIG.iosStoreUrl);if(!url){toast('Pure Poker store link is pending. You can play another hand.');return;}if(m&&ready){try{m.open(url);}catch(e){toast('The store could not open. Please try again.');}}else toast('Store opening is available inside the ad preview or app.');}
+ function resize(){const landscape=innerWidth/innerHeight>=1.5,w=landscape?800:400,h=landscape?440:870;const scale=Math.min(innerWidth/w,innerHeight/h);ui.stage.style.transform='translate(-50%,-50%) scale('+scale+')';}
+ function visibility(value){visible=value&&!document.hidden;document.body.style.setProperty('--ad-visible',visible?'1':'0');document.body.style.setProperty('--chip-motion',visible?'running':'paused');document.querySelectorAll('.nudge').forEach(el=>el.style.animationPlayState=visible?'running':'paused');if(audio){if(!visible)audio.suspend().catch(()=>{});else audio.resume().catch(()=>{});}}
+ function boot(){if(ready)return;ready=true;ui={stage:document.getElementById('stage'),sound:document.getElementById('sound'),seats:document.getElementById('seats'),board:document.getElementById('board'),pot:document.getElementById('pot'),stack:document.getElementById('stack'),hole:document.getElementById('hole'),effects:document.getElementById('effects'),handName:document.getElementById('hand-name'),instruction:document.getElementById('instruction'),roundLabel:document.getElementById('round-label'),headline:document.getElementById('headline'),primary:document.getElementById('primary'),secondary:document.getElementById('secondary'),fold:document.getElementById('fold'),end:document.getElementById('end'),endTitle:document.getElementById('end-title'),endCopy:document.getElementById('end-copy'),endResult:document.getElementById('end-result'),replay:document.getElementById('replay'),toast:document.getElementById('toast')};
+ ui.primary.onclick=()=>act(false);ui.secondary.onclick=()=>act(true);ui.fold.onclick=()=>{if(busy||ended||!visible)return;start();tone('fold');folded=true;finish(true);};ui.replay.onclick=()=>{handNumber++;reset(current);};document.getElementById('install').onclick=install;ui.sound.onclick=toggleAudio;
+ document.addEventListener('visibilitychange',()=>visibility(m&&m.isViewable?m.isViewable():true));window.addEventListener('pagehide',()=>visibility(false));window.addEventListener('pageshow',()=>visibility(m&&m.isViewable?m.isViewable():true));window.addEventListener('resize',resize);
+ if(m){m.addEventListener('viewableChange',visibility);m.addEventListener('sizeChange',resize);m.addEventListener('stateChange',s=>{if(s==='hidden')visibility(false);else visibility(m.isViewable());});visibility(m.isViewable());}
+ reset(current);updateSound();resize();document.getElementById('loading').classList.add('hidden');ui.stage.style.visibility='visible';requestAnimationFrame(ticker);
+ /* Read-only state for local QA; no network, tracking, or storage. */
+ window.PurePoker={getState:()=>({scenario:current,stage,started,busy,ended,pot,stack,invested,clock,visible,muted,audioReady:Object.keys(soundBuffers).length===6,audioContextState:audio?.state||'uninitialized',audioEvents:audioEvents.map(e=>({...e})),handNumber,profile:profile.name,gameplayMode:refActive?'reference':'varied',referencePhase,bankPot,referenceEvents:referenceEvents.map(e=>({...e})),recommendedAction:refActive&&(refPrompt?.action==='bet'||refPrompt?.action==='allin')?'secondary':'primary',currentActor,pending:pending.slice(),turns:turns.map(t=>({...t})),active:active.slice(),facing,target,roundPaid:{...roundPaid},opponentStacks:hand.stacks.slice(),history:history.map(a=>({...a})),settled,netResult:stack-hand.stack})};
+ }
+ /* The host injects MRAID. No remote mraid.js or asset requests are made. */
+ m=window.mraid||null;
+ if(m){if(m.getState()==='loading')m.addEventListener('ready',boot);else boot();}else boot();
+})();
+</script>
+</body></html>

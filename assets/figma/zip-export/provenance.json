@@ -1,0 +1,814 @@
+[
+  {
+    "asset": "card_2s",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      100,
+      96,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_3s",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      100,
+      419,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_4s",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      100,
+      730,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_5s",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      100,
+      1041,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_6s",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      100,
+      1352,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_7s",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      100,
+      1663,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_8s",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      100,
+      1974,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_9s",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      100,
+      2285,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_Ts",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      100,
+      2596,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_Js",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      100,
+      2907,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_Qs",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      100,
+      3218,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_Ks",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      100,
+      3529,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_As",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      100,
+      3840,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_2c",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      321,
+      96,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_3c",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      321,
+      419,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_4c",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      321,
+      730,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_5c",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      321,
+      1041,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_6c",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      321,
+      1352,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_7c",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      321,
+      1663,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_8c",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      321,
+      1974,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_9c",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      321,
+      2285,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_Tc",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      321,
+      2596,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_Jc",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      321,
+      2907,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_Qc",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      321,
+      3218,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_Kc",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      321,
+      3529,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_Ac",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      321,
+      3840,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_2h",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      542,
+      96,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_3h",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      542,
+      419,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_4h",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      542,
+      730,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_5h",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      542,
+      1041,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_6h",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      542,
+      1352,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_7h",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      542,
+      1663,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_8h",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      542,
+      1974,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_9h",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      542,
+      2285,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_Th",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      542,
+      2596,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_Jh",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      542,
+      2907,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_Qh",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      542,
+      3218,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_Kh",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      542,
+      3529,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_Ah",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      542,
+      3840,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_2d",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      763,
+      96,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_3d",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      763,
+      419,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_4d",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      763,
+      730,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_5d",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      763,
+      1041,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_6d",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      763,
+      1352,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_7d",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      763,
+      1663,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_8d",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      763,
+      1974,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_9d",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      763,
+      2285,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_Td",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      763,
+      2596,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_Jd",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      763,
+      2907,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_Qd",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      763,
+      3218,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_Kd",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      763,
+      3529,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_Ad",
+    "source": "Pure GamePlay Ad (1).zip/Poker in game cards.png",
+    "crop": [
+      763,
+      3840,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "card_back",
+    "source": "Pure GamePlay Ad (1).zip/Inner table asset.png",
+    "crop": [
+      1457,
+      61,
+      208,
+      286
+    ],
+    "size": [
+      208,
+      286
+    ]
+  },
+  {
+    "asset": "avatar_man",
+    "source": "Pure GamePlay Ad.zip/Group 40.png",
+    "crop": [
+      54,
+      93,
+      1412,
+      1882
+    ],
+    "size": [
+      1412,
+      1882
+    ]
+  },
+  {
+    "asset": "avatar_spunk",
+    "source": "Pure GamePlay Ad.zip/Spunk Table 2.png",
+    "crop": [
+      0,
+      0,
+      1412,
+      1129
+    ],
+    "size": [
+      1412,
+      1129
+    ]
+  },
+  {
+    "asset": "avatar_maya",
+    "source": "Pure GamePlay Ad.zip/maya_top.png",
+    "crop": [
+      0,
+      0,
+      1412,
+      1129
+    ],
+    "size": [
+      1412,
+      1129
+    ]
+  },
+  {
+    "asset": "avatar_panda",
+    "source": "Pure GamePlay Ad.zip/xio_top.png",
+    "crop": [
+      0,
+      0,
+      1412,
+      1129
+    ],
+    "size": [
+      1412,
+      1129
+    ]
+  },
+  {
+    "asset": "avatar_farah",
+    "source": "Pure GamePlay Ad.zip/Farah 3.png",
+    "crop": [
+      0,
+      0,
+      1412,
+      1129
+    ],
+    "size": [
+      1412,
+      1129
+    ]
+  }
+]

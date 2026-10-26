@@ -1,0 +1,4 @@
+node_modules/
+tools/vendor/
+test-results/
+reference-analysis/figma/observed-*.json

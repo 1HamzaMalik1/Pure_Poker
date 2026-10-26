@@ -1,0 +1,31 @@
+{
+  "source": "WhatsApp Video 2026-10-25 at 1.15.25 PM.mp4",
+  "clips": {
+    "fold": {
+      "start": 1.51,
+      "end": 1.85
+    },
+    "chip": {
+      "start": 7.72,
+      "end": 8.13
+    },
+    "gather": {
+      "start": 11.61,
+      "end": 12.13
+    },
+    "card": {
+      "start": 20.37,
+      "end": 20.63
+    },
+    "check": {
+      "start": 13.64,
+      "end": 14.22
+    },
+    "win": {
+      "start": 37.24,
+      "end": 39.32
+    }
+  },
+  "music": "No continuous background music was detected: the recording is silent between discrete game effects.",
+  "integration": "Effects are triggered by gameplay events, not a continuously running video soundtrack."
+}

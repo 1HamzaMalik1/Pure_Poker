@@ -1,0 +1,1385 @@
+{
+  "date": "2026-10-25T15:40:49.497Z",
+  "checks": [
+    {
+      "scenario": "full-house",
+      "referenceSequence": "pass",
+      "amounts": "pass",
+      "riverAndPayout": "pass",
+      "result": "pass"
+    },
+    {
+      "scenario": "straight",
+      "referenceSequence": "pass",
+      "amounts": "pass",
+      "riverAndPayout": "pass",
+      "result": "pass"
+    },
+    {
+      "viewport": {
+        "width": 320,
+        "height": 480
+      },
+      "controls": "pass",
+      "result": "pass"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "controls": "pass",
+      "result": "pass"
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "controls": "pass",
+      "result": "pass"
+    },
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "controls": "pass",
+      "result": "pass"
+    },
+    {
+      "scenario": "full-house",
+      "alternativeBranch": "pass",
+      "result": "pass"
+    },
+    {
+      "scenario": "straight",
+      "alternativeBranch": "pass",
+      "result": "pass"
+    },
+    {
+      "alternativeAt": "flop-bet",
+      "action": "Check",
+      "accounting": "pass",
+      "result": "pass"
+    },
+    {
+      "alternativeAt": "turn-all-in",
+      "action": "Call the raise",
+      "accounting": "pass",
+      "result": "pass"
+    },
+    {
+      "mraid": "ready, hidden pause, resume, no first-tap redirect",
+      "result": "pass"
+    }
+  ],
+  "footage": "WhatsApp Video 2026-10-25 at 1.15.25 PM.mp4 and IMG_3768.mp4",
+  "results": [
+    {
+      "scenario": "fullhouse",
+      "payments": [
+        [
+          3,
+          3,
+          7.5,
+          141
+        ],
+        [
+          5,
+          2.5,
+          10,
+          141
+        ],
+        [
+          8,
+          4,
+          14,
+          137
+        ],
+        [
+          3,
+          4,
+          18,
+          137
+        ],
+        [
+          5,
+          4,
+          22,
+          137
+        ],
+        [
+          8,
+          10,
+          32,
+          127
+        ],
+        [
+          3,
+          10,
+          42,
+          127
+        ],
+        [
+          5,
+          40,
+          82,
+          127
+        ],
+        [
+          8,
+          127,
+          209,
+          0
+        ],
+        [
+          3,
+          84.5,
+          293.5,
+          0
+        ],
+        [
+          5,
+          97,
+          390.5,
+          0
+        ]
+      ],
+      "events": [
+        {
+          "kind": "fold",
+          "seat": 6,
+          "sourceTime": 1.283,
+          "at": 1300,
+          "pot": 4.5,
+          "bankPot": 0,
+          "stack": 141,
+          "opponents": [
+            50,
+            61,
+            96,
+            101.5,
+            142,
+            384.5,
+            108,
+            176
+          ],
+          "boardCount": 0
+        },
+        {
+          "kind": "fold",
+          "seat": 4,
+          "sourceTime": 2.817,
+          "at": 2900,
+          "pot": 4.5,
+          "bankPot": 0,
+          "stack": 141,
+          "opponents": [
+            50,
+            61,
+            96,
+            101.5,
+            142,
+            384.5,
+            108,
+            176
+          ],
+          "boardCount": 0
+        },
+        {
+          "kind": "fold",
+          "seat": 2,
+          "sourceTime": 4.333,
+          "at": 4400,
+          "pot": 4.5,
+          "bankPot": 0,
+          "stack": 141,
+          "opponents": [
+            50,
+            61,
+            96,
+            101.5,
+            142,
+            384.5,
+            108,
+            176
+          ],
+          "boardCount": 0
+        },
+        {
+          "kind": "fold",
+          "seat": 1,
+          "sourceTime": 5.883,
+          "at": 5900,
+          "pot": 4.5,
+          "bankPot": 0,
+          "stack": 141,
+          "opponents": [
+            50,
+            61,
+            96,
+            101.5,
+            142,
+            384.5,
+            108,
+            176
+          ],
+          "boardCount": 0
+        },
+        {
+          "kind": "pay",
+          "seat": 3,
+          "amount": 3,
+          "sourceTime": 7.833,
+          "at": 7900,
+          "pot": 7.5,
+          "bankPot": 0,
+          "stack": 141,
+          "opponents": [
+            50,
+            61,
+            96,
+            98.5,
+            142,
+            384.5,
+            108,
+            176
+          ],
+          "boardCount": 0
+        },
+        {
+          "kind": "pay",
+          "seat": 5,
+          "amount": 2.5,
+          "sourceTime": 9.8,
+          "at": 9800,
+          "pot": 10,
+          "bankPot": 0,
+          "stack": 141,
+          "opponents": [
+            50,
+            61,
+            96,
+            98.5,
+            142,
+            382,
+            108,
+            176
+          ],
+          "boardCount": 0
+        },
+        {
+          "kind": "fold",
+          "seat": 7,
+          "sourceTime": 11.367,
+          "at": 11400,
+          "pot": 10,
+          "bankPot": 0,
+          "stack": 141,
+          "opponents": [
+            50,
+            61,
+            96,
+            98.5,
+            142,
+            382,
+            108,
+            176
+          ],
+          "boardCount": 0
+        },
+        {
+          "kind": "gather",
+          "sourceTime": 11.6,
+          "at": 11600,
+          "pot": 10,
+          "bankPot": 0,
+          "stack": 141,
+          "opponents": [
+            50,
+            61,
+            96,
+            98.5,
+            142,
+            382,
+            108,
+            176
+          ],
+          "boardCount": 0
+        },
+        {
+          "kind": "deal",
+          "count": 3,
+          "sourceTime": 12.1,
+          "at": 12100,
+          "pot": 10,
+          "bankPot": 0,
+          "stack": 141,
+          "opponents": [
+            50,
+            61,
+            96,
+            98.5,
+            142,
+            382,
+            108,
+            176
+          ],
+          "boardCount": 3
+        },
+        {
+          "kind": "bank",
+          "sourceTime": 12.033,
+          "at": 12100,
+          "pot": 10,
+          "bankPot": 10,
+          "stack": 141,
+          "opponents": [
+            50,
+            61,
+            96,
+            98.5,
+            142,
+            382,
+            108,
+            176
+          ],
+          "boardCount": 3
+        },
+        {
+          "kind": "check",
+          "seat": 5,
+          "sourceTime": 13.583,
+          "at": 13600,
+          "pot": 10,
+          "bankPot": 10,
+          "stack": 141,
+          "opponents": [
+            50,
+            61,
+            96,
+            98.5,
+            142,
+            382,
+            108,
+            176
+          ],
+          "boardCount": 3
+        },
+        {
+          "kind": "prompt",
+          "amount": 4,
+          "sourceTime": 15.25,
+          "at": 15300,
+          "pot": 10,
+          "bankPot": 10,
+          "stack": 141,
+          "opponents": [
+            50,
+            61,
+            96,
+            98.5,
+            142,
+            382,
+            108,
+            176
+          ],
+          "boardCount": 3
+        },
+        {
+          "kind": "pay",
+          "seat": 8,
+          "amount": 4,
+          "sourceTime": 15.55,
+          "at": 16600,
+          "pot": 14,
+          "bankPot": 10,
+          "stack": 137,
+          "opponents": [
+            50,
+            61,
+            96,
+            98.5,
+            142,
+            382,
+            108,
+            176
+          ],
+          "boardCount": 3
+        },
+        {
+          "kind": "pay",
+          "seat": 3,
+          "amount": 4,
+          "sourceTime": 17.5,
+          "at": 18600,
+          "pot": 18,
+          "bankPot": 10,
+          "stack": 137,
+          "opponents": [
+            50,
+            61,
+            96,
+            94.5,
+            142,
+            382,
+            108,
+            176
+          ],
+          "boardCount": 3
+        },
+        {
+          "kind": "pay",
+          "seat": 5,
+          "amount": 4,
+          "sourceTime": 19.483,
+          "at": 20600,
+          "pot": 22,
+          "bankPot": 10,
+          "stack": 137,
+          "opponents": [
+            50,
+            61,
+            96,
+            94.5,
+            142,
+            378,
+            108,
+            176
+          ],
+          "boardCount": 3
+        },
+        {
+          "kind": "gather",
+          "sourceTime": 19.717,
+          "at": 20800,
+          "pot": 22,
+          "bankPot": 10,
+          "stack": 137,
+          "opponents": [
+            50,
+            61,
+            96,
+            94.5,
+            142,
+            378,
+            108,
+            176
+          ],
+          "boardCount": 3
+        },
+        {
+          "kind": "bank",
+          "sourceTime": 20.167,
+          "at": 21300,
+          "pot": 22,
+          "bankPot": 22,
+          "stack": 137,
+          "opponents": [
+            50,
+            61,
+            96,
+            94.5,
+            142,
+            378,
+            108,
+            176
+          ],
+          "boardCount": 3
+        },
+        {
+          "kind": "deal",
+          "count": 4,
+          "sourceTime": 20.433,
+          "at": 21500,
+          "pot": 22,
+          "bankPot": 22,
+          "stack": 137,
+          "opponents": [
+            50,
+            61,
+            96,
+            94.5,
+            142,
+            378,
+            108,
+            176
+          ],
+          "boardCount": 4
+        },
+        {
+          "kind": "check",
+          "seat": 5,
+          "sourceTime": 21.717,
+          "at": 22800,
+          "pot": 22,
+          "bankPot": 22,
+          "stack": 137,
+          "opponents": [
+            50,
+            61,
+            96,
+            94.5,
+            142,
+            378,
+            108,
+            176
+          ],
+          "boardCount": 4
+        },
+        {
+          "kind": "prompt",
+          "amount": 10,
+          "sourceTime": 23.383,
+          "at": 24500,
+          "pot": 22,
+          "bankPot": 22,
+          "stack": 137,
+          "opponents": [
+            50,
+            61,
+            96,
+            94.5,
+            142,
+            378,
+            108,
+            176
+          ],
+          "boardCount": 4
+        },
+        {
+          "kind": "pay",
+          "seat": 8,
+          "amount": 10,
+          "sourceTime": 23.7,
+          "at": 25100,
+          "pot": 32,
+          "bankPot": 22,
+          "stack": 127,
+          "opponents": [
+            50,
+            61,
+            96,
+            94.5,
+            142,
+            378,
+            108,
+            176
+          ],
+          "boardCount": 4
+        },
+        {
+          "kind": "pay",
+          "seat": 3,
+          "amount": 10,
+          "sourceTime": 25.65,
+          "at": 27000,
+          "pot": 42,
+          "bankPot": 22,
+          "stack": 127,
+          "opponents": [
+            50,
+            61,
+            96,
+            84.5,
+            142,
+            378,
+            108,
+            176
+          ],
+          "boardCount": 4
+        },
+        {
+          "kind": "pay",
+          "seat": 5,
+          "amount": 40,
+          "sourceTime": 27.617,
+          "at": 29000,
+          "pot": 82,
+          "bankPot": 22,
+          "stack": 127,
+          "opponents": [
+            50,
+            61,
+            96,
+            84.5,
+            142,
+            338,
+            108,
+            176
+          ],
+          "boardCount": 4
+        },
+        {
+          "kind": "prompt",
+          "amount": 127,
+          "sourceTime": 29.25,
+          "at": 30600,
+          "pot": 82,
+          "bankPot": 22,
+          "stack": 127,
+          "opponents": [
+            50,
+            61,
+            96,
+            84.5,
+            142,
+            338,
+            108,
+            176
+          ],
+          "boardCount": 4
+        },
+        {
+          "kind": "pay",
+          "seat": 8,
+          "amount": 127,
+          "sourceTime": 29.583,
+          "at": 32000,
+          "pot": 209,
+          "bankPot": 22,
+          "stack": 0,
+          "opponents": [
+            50,
+            61,
+            96,
+            84.5,
+            142,
+            338,
+            108,
+            176
+          ],
+          "boardCount": 4
+        },
+        {
+          "kind": "pay",
+          "seat": 3,
+          "amount": 84.5,
+          "sourceTime": 31.517,
+          "at": 33900,
+          "pot": 293.5,
+          "bankPot": 22,
+          "stack": 0,
+          "opponents": [
+            50,
+            61,
+            96,
+            0,
+            142,
+            338,
+            108,
+            176
+          ],
+          "boardCount": 4
+        },
+        {
+          "kind": "pay",
+          "seat": 5,
+          "amount": 97,
+          "sourceTime": 33.5,
+          "at": 35900,
+          "pot": 390.5,
+          "bankPot": 22,
+          "stack": 0,
+          "opponents": [
+            50,
+            61,
+            96,
+            0,
+            142,
+            241,
+            108,
+            176
+          ],
+          "boardCount": 4
+        },
+        {
+          "kind": "gather",
+          "sourceTime": 33.983,
+          "at": 36400,
+          "pot": 390.5,
+          "bankPot": 22,
+          "stack": 0,
+          "opponents": [
+            50,
+            61,
+            96,
+            0,
+            142,
+            241,
+            108,
+            176
+          ],
+          "boardCount": 4
+        },
+        {
+          "kind": "bank",
+          "sourceTime": 34.417,
+          "at": 36800,
+          "pot": 390.5,
+          "bankPot": 390.5,
+          "stack": 0,
+          "opponents": [
+            50,
+            61,
+            96,
+            0,
+            142,
+            241,
+            108,
+            176
+          ],
+          "boardCount": 4
+        },
+        {
+          "kind": "reveal",
+          "sourceTime": 34.85,
+          "at": 37200,
+          "pot": 390.5,
+          "bankPot": 390.5,
+          "stack": 0,
+          "opponents": [
+            50,
+            61,
+            96,
+            0,
+            142,
+            241,
+            108,
+            176
+          ],
+          "boardCount": 4
+        },
+        {
+          "kind": "deal",
+          "count": 5,
+          "sourceTime": 35.6,
+          "at": 38000,
+          "pot": 390.5,
+          "bankPot": 390.5,
+          "stack": 0,
+          "opponents": [
+            50,
+            61,
+            96,
+            0,
+            142,
+            241,
+            108,
+            176
+          ],
+          "boardCount": 5
+        },
+        {
+          "kind": "winner",
+          "sourceTime": 36.95,
+          "at": 39300,
+          "pot": 390.5,
+          "bankPot": 390.5,
+          "stack": 0,
+          "opponents": [
+            50,
+            61,
+            96,
+            0,
+            142,
+            241,
+            108,
+            176
+          ],
+          "boardCount": 5
+        },
+        {
+          "kind": "highlight",
+          "sourceTime": 37.533,
+          "at": 39900,
+          "pot": 390.5,
+          "bankPot": 390.5,
+          "stack": 0,
+          "opponents": [
+            50,
+            61,
+            96,
+            0,
+            142,
+            241,
+            108,
+            176
+          ],
+          "boardCount": 5
+        },
+        {
+          "kind": "hide-pots",
+          "sourceTime": 37.95,
+          "at": 40300,
+          "pot": 390.5,
+          "bankPot": 390.5,
+          "stack": 0,
+          "opponents": [
+            50,
+            61,
+            96,
+            0,
+            142,
+            241,
+            108,
+            176
+          ],
+          "boardCount": 5
+        },
+        {
+          "kind": "award-flight",
+          "sourceTime": 38.467,
+          "at": 40900,
+          "pot": 390.5,
+          "bankPot": 390.5,
+          "stack": 0,
+          "opponents": [
+            50,
+            61,
+            96,
+            0,
+            142,
+            241,
+            108,
+            176
+          ],
+          "boardCount": 5
+        },
+        {
+          "kind": "award-label",
+          "sourceTime": 38.767,
+          "at": 41200,
+          "pot": 390.5,
+          "bankPot": 390.5,
+          "stack": 0,
+          "opponents": [
+            50,
+            61,
+            96,
+            0,
+            142,
+            241,
+            108,
+            176
+          ],
+          "boardCount": 5
+        },
+        {
+          "kind": "award",
+          "sourceTime": 39.067,
+          "at": 41500,
+          "pot": 390.5,
+          "bankPot": 390.5,
+          "stack": 390.5,
+          "opponents": [
+            50,
+            61,
+            96,
+            0,
+            142,
+            241,
+            108,
+            176
+          ],
+          "boardCount": 5
+        },
+        {
+          "kind": "finish",
+          "sourceTime": 41.1,
+          "at": 43500,
+          "pot": 390.5,
+          "bankPot": 390.5,
+          "stack": 390.5,
+          "opponents": [
+            50,
+            61,
+            96,
+            0,
+            142,
+            241,
+            108,
+            176
+          ],
+          "boardCount": 5
+        }
+      ],
+      "finalPot": 390.5,
+      "finalStack": 390.5
+    },
+    {
+      "scenario": "straight",
+      "payments": [
+        [
+          5,
+          4,
+          11.5,
+          483.25
+        ],
+        [
+          8,
+          5,
+          16.5,
+          478.25
+        ]
+      ],
+      "events": [
+        {
+          "kind": "fold",
+          "seat": 6,
+          "sourceTime": 0.017,
+          "at": 100,
+          "pot": 7.5,
+          "bankPot": 0,
+          "stack": 483.25,
+          "opponents": [
+            265.5,
+            208,
+            316.52,
+            304.5,
+            665.97,
+            221,
+            261,
+            42
+          ],
+          "boardCount": 0
+        },
+        {
+          "kind": "fold",
+          "seat": 4,
+          "sourceTime": 1.433,
+          "at": 1500,
+          "pot": 7.5,
+          "bankPot": 0,
+          "stack": 483.25,
+          "opponents": [
+            265.5,
+            208,
+            316.52,
+            304.5,
+            665.97,
+            221,
+            261,
+            42
+          ],
+          "boardCount": 0
+        },
+        {
+          "kind": "fold",
+          "seat": 2,
+          "sourceTime": 2.95,
+          "at": 3000,
+          "pot": 7.5,
+          "bankPot": 0,
+          "stack": 483.25,
+          "opponents": [
+            265.5,
+            208,
+            316.52,
+            304.5,
+            665.97,
+            221,
+            261,
+            42
+          ],
+          "boardCount": 0
+        },
+        {
+          "kind": "fold",
+          "seat": 0,
+          "sourceTime": 4.483,
+          "at": 4500,
+          "pot": 7.5,
+          "bankPot": 0,
+          "stack": 483.25,
+          "opponents": [
+            265.5,
+            208,
+            316.52,
+            304.5,
+            665.97,
+            221,
+            261,
+            42
+          ],
+          "boardCount": 0
+        },
+        {
+          "kind": "pay",
+          "seat": 5,
+          "amount": 4,
+          "sourceTime": 6.467,
+          "at": 6500,
+          "pot": 11.5,
+          "bankPot": 0,
+          "stack": 483.25,
+          "opponents": [
+            265.5,
+            208,
+            316.52,
+            304.5,
+            665.97,
+            217,
+            261,
+            42
+          ],
+          "boardCount": 0
+        },
+        {
+          "kind": "gather",
+          "sourceTime": 6.7,
+          "at": 6700,
+          "pot": 11.5,
+          "bankPot": 0,
+          "stack": 483.25,
+          "opponents": [
+            265.5,
+            208,
+            316.52,
+            304.5,
+            665.97,
+            217,
+            261,
+            42
+          ],
+          "boardCount": 0
+        },
+        {
+          "kind": "bank",
+          "sourceTime": 7.15,
+          "at": 7200,
+          "pot": 11.5,
+          "bankPot": 11.5,
+          "stack": 483.25,
+          "opponents": [
+            265.5,
+            208,
+            316.52,
+            304.5,
+            665.97,
+            217,
+            261,
+            42
+          ],
+          "boardCount": 0
+        },
+        {
+          "kind": "deal",
+          "count": 3,
+          "sourceTime": 7.25,
+          "at": 7300,
+          "pot": 11.5,
+          "bankPot": 11.5,
+          "stack": 483.25,
+          "opponents": [
+            265.5,
+            208,
+            316.52,
+            304.5,
+            665.97,
+            217,
+            261,
+            42
+          ],
+          "boardCount": 3
+        },
+        {
+          "kind": "check",
+          "seat": 5,
+          "sourceTime": 8.75,
+          "at": 8800,
+          "pot": 11.5,
+          "bankPot": 11.5,
+          "stack": 483.25,
+          "opponents": [
+            265.5,
+            208,
+            316.52,
+            304.5,
+            665.97,
+            217,
+            261,
+            42
+          ],
+          "boardCount": 3
+        },
+        {
+          "kind": "prompt",
+          "amount": 2.5,
+          "sourceTime": 9.967,
+          "at": 10000,
+          "pot": 11.5,
+          "bankPot": 11.5,
+          "stack": 483.25,
+          "opponents": [
+            265.5,
+            208,
+            316.52,
+            304.5,
+            665.97,
+            217,
+            261,
+            42
+          ],
+          "boardCount": 3
+        },
+        {
+          "kind": "deal",
+          "count": 4,
+          "sourceTime": 10.433,
+          "at": 10500,
+          "pot": 11.5,
+          "bankPot": 11.5,
+          "stack": 483.25,
+          "opponents": [
+            265.5,
+            208,
+            316.52,
+            304.5,
+            665.97,
+            217,
+            261,
+            42
+          ],
+          "boardCount": 4
+        },
+        {
+          "kind": "check",
+          "seat": 5,
+          "sourceTime": 11.733,
+          "at": 11800,
+          "pot": 11.5,
+          "bankPot": 11.5,
+          "stack": 483.25,
+          "opponents": [
+            265.5,
+            208,
+            316.52,
+            304.5,
+            665.97,
+            217,
+            261,
+            42
+          ],
+          "boardCount": 4
+        },
+        {
+          "kind": "prompt",
+          "amount": 5,
+          "sourceTime": 13.417,
+          "at": 13500,
+          "pot": 11.5,
+          "bankPot": 11.5,
+          "stack": 483.25,
+          "opponents": [
+            265.5,
+            208,
+            316.52,
+            304.5,
+            665.97,
+            217,
+            261,
+            42
+          ],
+          "boardCount": 4
+        },
+        {
+          "kind": "pay",
+          "seat": 8,
+          "amount": 5,
+          "sourceTime": 13.733,
+          "at": 14200,
+          "pot": 16.5,
+          "bankPot": 11.5,
+          "stack": 478.25,
+          "opponents": [
+            265.5,
+            208,
+            316.52,
+            304.5,
+            665.97,
+            217,
+            261,
+            42
+          ],
+          "boardCount": 4
+        },
+        {
+          "kind": "fold",
+          "seat": 5,
+          "sourceTime": 15.283,
+          "at": 15700,
+          "pot": 16.5,
+          "bankPot": 11.5,
+          "stack": 478.25,
+          "opponents": [
+            265.5,
+            208,
+            316.52,
+            304.5,
+            665.97,
+            217,
+            261,
+            42
+          ],
+          "boardCount": 4
+        },
+        {
+          "kind": "rabbit",
+          "sourceTime": 15.8,
+          "at": 16200,
+          "pot": 16.5,
+          "bankPot": 11.5,
+          "stack": 478.25,
+          "opponents": [
+            265.5,
+            208,
+            316.52,
+            304.5,
+            665.97,
+            217,
+            261,
+            42
+          ],
+          "boardCount": 4
+        },
+        {
+          "kind": "gather",
+          "sourceTime": 15.767,
+          "at": 16200,
+          "pot": 16.5,
+          "bankPot": 11.5,
+          "stack": 478.25,
+          "opponents": [
+            265.5,
+            208,
+            316.52,
+            304.5,
+            665.97,
+            217,
+            261,
+            42
+          ],
+          "boardCount": 4
+        },
+        {
+          "kind": "bank",
+          "sourceTime": 16.183,
+          "at": 16600,
+          "pot": 16.5,
+          "bankPot": 16.5,
+          "stack": 478.25,
+          "opponents": [
+            265.5,
+            208,
+            316.52,
+            304.5,
+            665.97,
+            217,
+            261,
+            42
+          ],
+          "boardCount": 4
+        },
+        {
+          "kind": "hide-pots",
+          "sourceTime": 16.467,
+          "at": 16900,
+          "pot": 16.5,
+          "bankPot": 16.5,
+          "stack": 478.25,
+          "opponents": [
+            265.5,
+            208,
+            316.52,
+            304.5,
+            665.97,
+            217,
+            261,
+            42
+          ],
+          "boardCount": 4
+        },
+        {
+          "kind": "award-flight",
+          "sourceTime": 16.867,
+          "at": 17300,
+          "pot": 16.5,
+          "bankPot": 16.5,
+          "stack": 478.25,
+          "opponents": [
+            265.5,
+            208,
+            316.52,
+            304.5,
+            665.97,
+            217,
+            261,
+            42
+          ],
+          "boardCount": 4
+        },
+        {
+          "kind": "award-label",
+          "sourceTime": 17.217,
+          "at": 17600,
+          "pot": 16.5,
+          "bankPot": 16.5,
+          "stack": 478.25,
+          "opponents": [
+            265.5,
+            208,
+            316.52,
+            304.5,
+            665.97,
+            217,
+            261,
+            42
+          ],
+          "boardCount": 4
+        },
+        {
+          "kind": "award",
+          "sourceTime": 17.55,
+          "at": 18000,
+          "pot": 16.5,
+          "bankPot": 16.5,
+          "stack": 494.75,
+          "opponents": [
+            265.5,
+            208,
+            316.52,
+            304.5,
+            665.97,
+            217,
+            261,
+            42
+          ],
+          "boardCount": 4
+        },
+        {
+          "kind": "finish",
+          "sourceTime": 19.5,
+          "at": 19900,
+          "pot": 16.5,
+          "bankPot": 16.5,
+          "stack": 494.75,
+          "opponents": [
+            265.5,
+            208,
+            316.52,
+            304.5,
+            665.97,
+            217,
+            261,
+            42
+          ],
+          "boardCount": 4
+        }
+      ],
+      "finalPot": 16.5,
+      "finalStack": 494.75
+    }
+  ]
+}
