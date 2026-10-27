@@ -1,0 +1,20 @@
+{
+  "checks": [
+    {
+      "scenario": "full-house",
+      "banner": "YOU WIN!",
+      "hand": "FULL HOUSE",
+      "award": 390.5,
+      "winningCards": 5,
+      "result": "pass"
+    },
+    {
+      "scenario": "straight",
+      "banner": "YOU WIN!",
+      "hand": "STRAIGHT",
+      "award": 16.5,
+      "winningCards": 5,
+      "result": "pass"
+    }
+  ]
+}

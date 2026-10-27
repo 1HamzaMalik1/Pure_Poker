@@ -1,19 +1,19 @@
 {
-  "builtAt": "2026-10-25T15:39:26.645Z",
+  "builtAt": "2026-10-27T11:02:26.201Z",
   "files": [
     {
       "file": "index.html",
-      "bytes": 3113850,
+      "bytes": 3140935,
       "scenario": "fullhouse"
     },
     {
       "file": "pure-poker-straight.html",
-      "bytes": 3113849,
+      "bytes": 3140934,
       "scenario": "straight"
     },
     {
       "file": "pure-poker-full-house.html",
-      "bytes": 3113850,
+      "bytes": 3140935,
       "scenario": "fullhouse"
     }
   ],

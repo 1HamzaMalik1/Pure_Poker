@@ -44,7 +44,7 @@
     "Some visual motion details are not pixel/frame-identical.",
     "Hero decisions wait for input; alternative decisions intentionally branch."
   ],
-  "opponentBehavior": "Default reference path follows the recorded folds, calls, checks and wager amounts. Alternative user choices enter varied betting. Every action remains visible in seat order.",
+  "opponentBehavior": "Reference timing and actions remain transcribed. Alternative choices use simulated decisions with validated raises, evaluated hand ranks, separate pot eligibility, ties and refunds.",
   "curatedCards": "Full house: K\u2665 4\u2660 8\u2663 5\u2666 8\u2665, with river after all-in calls and reveal. Straight: 9\u2666 J\u2665 10\u2660 Q\u2663, then a fold win with an unrevealed rabbit card; no revealed 2\u2663 on the reference path.",
   "branchValidation": "deliverables/reference-gameplay-qa.json",
   "figmaSession": "c6f65045-1098-4773-9936-2d474762a678",
@@ -94,7 +94,7 @@
     "Rabbit-card crop extracted from the supplied straight video."
   ],
   "uniqueAvatarsPerHand": 9,
-  "cardFlip": "Two-sided back-to-face card animation for every community deal and opponent showdown reveal.",
+  "cardFlip": "Opening hole cards, community deals and opponent showdowns use separate back/front faces.",
   "audio": {
     "source": "WhatsApp Video 2026-10-25 at 1.15.25 PM.mp4",
     "effects": [
@@ -111,5 +111,35 @@
     "muteAndHostPause": "Verified"
   },
   "settingsButton": "Removed from markup and handlers",
-  "motionAndSoundValidation": "deliverables/flips-audio-qa.json"
+  "motionAndSoundValidation": "deliverables/flips-audio-qa.json",
+  "rulesAudit": {
+    "report": "deliverables/poker-rules-and-motion-audit.md",
+    "evaluator": "Best five of seven; no guaranteed hero award",
+    "mainAndSidePots": [
+      305.5,
+      85
+    ],
+    "mainHandAward": 390.5,
+    "refundsAndTies": "Implemented",
+    "minimumRaisesAndShortAllIn": "Validated",
+    "initialSnapshot": "Only Play enabled until a legal decision",
+    "exhaustiveFiveCardHands": 2598960,
+    "unitChecks": 16,
+    "variedPlayThroughs": 16,
+    "scope": "Curated single-hand No-Limit Holdem playable"
+  },
+  "motionReference": {
+    "source": "Downloads/Pure_Poker.mp4",
+    "frames": 600,
+    "durationSeconds": 20.03,
+    "implemented": [
+      "opening hole-card deal/flip",
+      "yellow street titles",
+      "made-hand glow and title",
+      "folded-seat fade",
+      "YOU WIN payout rays",
+      "green fanned-card end card"
+    ],
+    "proof": "deliverables/pure-motion-qa.json"
+  }
 }

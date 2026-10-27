@@ -1,0 +1,132 @@
+{
+  "checks": [
+    {
+      "scenario": "full-house",
+      "seed": 1,
+      "heroDecisions": 3,
+      "pot": 302,
+      "heroAward": 302,
+      "result": "pass"
+    },
+    {
+      "scenario": "full-house",
+      "seed": 2,
+      "heroDecisions": 4,
+      "pot": 30,
+      "heroAward": 30,
+      "result": "pass"
+    },
+    {
+      "scenario": "full-house",
+      "seed": 3,
+      "heroDecisions": 3,
+      "pot": 292,
+      "heroAward": 292,
+      "result": "pass"
+    },
+    {
+      "scenario": "full-house",
+      "seed": 4,
+      "heroDecisions": 3,
+      "pot": 292,
+      "heroAward": 292,
+      "result": "pass"
+    },
+    {
+      "scenario": "full-house",
+      "seed": 5,
+      "heroDecisions": 4,
+      "pot": 207,
+      "heroAward": 207,
+      "result": "pass"
+    },
+    {
+      "scenario": "full-house",
+      "seed": 6,
+      "heroDecisions": 3,
+      "pot": 10,
+      "heroAward": 10,
+      "result": "pass"
+    },
+    {
+      "scenario": "full-house",
+      "seed": 7,
+      "heroDecisions": 3,
+      "pot": 390.5,
+      "heroAward": 390.5,
+      "result": "pass"
+    },
+    {
+      "scenario": "full-house",
+      "seed": 8,
+      "heroDecisions": 3,
+      "pot": 40,
+      "heroAward": 40,
+      "result": "pass"
+    },
+    {
+      "scenario": "straight",
+      "seed": 1,
+      "heroDecisions": 3,
+      "pot": 44.5,
+      "heroAward": 44.5,
+      "result": "pass"
+    },
+    {
+      "scenario": "straight",
+      "seed": 2,
+      "heroDecisions": 1,
+      "pot": 15.5,
+      "heroAward": 15.5,
+      "result": "pass"
+    },
+    {
+      "scenario": "straight",
+      "seed": 3,
+      "heroDecisions": 3,
+      "pot": 19.5,
+      "heroAward": 19.5,
+      "result": "pass"
+    },
+    {
+      "scenario": "straight",
+      "seed": 4,
+      "heroDecisions": 3,
+      "pot": 59.5,
+      "heroAward": 59.5,
+      "result": "pass"
+    },
+    {
+      "scenario": "straight",
+      "seed": 5,
+      "heroDecisions": 1,
+      "pot": 15.5,
+      "heroAward": 15.5,
+      "result": "pass"
+    },
+    {
+      "scenario": "straight",
+      "seed": 6,
+      "heroDecisions": 3,
+      "pot": 19.5,
+      "heroAward": 19.5,
+      "result": "pass"
+    },
+    {
+      "scenario": "straight",
+      "seed": 7,
+      "heroDecisions": 3,
+      "pot": 44.5,
+      "heroAward": 44.5,
+      "result": "pass"
+    },
+    {
+      "scenario": "straight",
+      "seed": 8,
+      "heroDecisions": 1,
+      "pot": 15.5,
+      "heroAward": 15.5,
+      "result": "pass"
+    }
+  ]
+}

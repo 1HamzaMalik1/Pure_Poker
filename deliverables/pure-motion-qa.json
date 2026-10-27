@@ -1,0 +1,26 @@
+{
+  "source": "Downloads/Pure_Poker.mp4",
+  "decodedFrames": 600,
+  "checks": [
+    {
+      "name": "opening card deal and flip",
+      "result": "pass"
+    },
+    {
+      "name": "yellow street labels",
+      "result": "pass"
+    },
+    {
+      "name": "made-hand title and winning-card outlines",
+      "result": "pass"
+    },
+    {
+      "name": "payout rays and YOU WIN title",
+      "result": "pass"
+    },
+    {
+      "name": "green end card and fanned cards",
+      "result": "pass"
+    }
+  ]
+}

@@ -89,17 +89,19 @@ function refApply(event){
  if(!refActive||ended)return;
  if(event.kind==='fold'){seatFold(event.seat);bubble(event.seat,'Fold',event.hold);}
  if(event.kind==='pay'){
-  if(event.label==='Bet'||event.label==='Raise'||event.label==='All in')target=(roundPaid[event.seat]||0)+event.amount;
+  if(event.label==='Bet'||event.label==='Raise'||event.label==='All in')wagerTarget((roundPaid[event.seat]||0)+event.amount,event.seat);
   if(event.label==='Raise')raises=1;
   pay(event.seat,event.amount,event.label,false);
   if(event.seat!==8)bubble(event.seat,hand.stacks[event.seat]===0?'All in':event.label,event.hold||3000);
  }
  if(event.kind==='check'){bubble(event.seat,'Check',event.hold||3000);note(event.seat,'check');tone('check');}
  if(event.kind==='gather')gatherStreet();
- if(event.kind==='bank'){bankPot=pot;roundPaid={8:0};target=0;facing=0;raises=0;clearBubbles();sync();}
+ if(event.kind==='bank'){bankPot=pot;beginBettingStreet();clearBubbles();sync();}
  if(event.kind==='deal'){
+  beginBettingStreet();
   stage=event.count===3?1:event.count===4?2:3;opening=false;
-  renderBoard(event.count);ui.handName.textContent=current==='straight'?(stage===1?'High Card':'Straight'):'Three of a Kind';tone('card');
+  renderBoard(event.count);showStreetTitle();ui.handName.textContent=heroEvaluation()?.name||'';tone('card');
+  if(current==='straight'&&stage===2)schedule(showMadeHand,620);
  }
  if(event.kind==='prompt'){
   referencePhase=event.phase;refPrompt=event;
@@ -111,12 +113,12 @@ function refApply(event){
  if(event.kind==='winner')referenceWinner();
  if(event.kind==='highlight')highlightRecordedHand();
  if(event.kind==='hide-pots')ui.stage.classList.add('paying-out');
- if(event.kind==='award-flight'){clearTurn();chips(true);}
+ if(event.kind==='award-flight'){clearTurn();chips(true);showWinEffect(pot);}
  if(event.kind==='award-label'){
   const el=document.createElement('div');el.className='win-amount';el.textContent='+'+fmt(pot);ui.effects.appendChild(el);
  }
  if(event.kind==='award'){
-  settled=true;stack+=pot;sync();ui.stage.classList.add('settled');
+  resolveRulePots();ui.stage.classList.add('settled');
   if(current==='straight'){active=[];ui.handName.className='hand-name';ui.handName.textContent='Straight';}
  }
  if(event.kind==='finish')finish(false);
@@ -149,9 +151,7 @@ function enterAlternative(secondary){
  refActive=false;refPrompt=null;referencePhase='alternative';jobs.length=0;
  ui.stage.classList.remove('reference-mode');
  ui.effects.querySelectorAll('.chip').forEach(el=>el.remove());clearBubbles();
- // The varied engine uses its original boolean mapping for full-house bets.
- const mapped=current==='fullhouse'&&stage>0&&facing===0?!secondary:secondary;
- variedAct(mapped);
+ variedAct(secondary);
 }
 act=function(secondary){
  if(busy||ended||!visible)return;
@@ -159,7 +159,7 @@ act=function(secondary){
  if(!refPrompt)return;
  const expected=refPrompt.action==='bet'||refPrompt.action==='allin';
  if(secondary!==expected){enterAlternative(secondary);return;}
- start();clearTurn();const phase=refPrompt.phase;note(8,phase==='start'?'play':refPrompt.action,0);
+ start();clearTurn();const phase=refPrompt.phase;if(phase==='start'||refPrompt.action==='check')note(8,phase==='start'?'play':'check',0);
  if(refPrompt.action==='check')tone('check');
  if(phase==='start')refRun(current==='fullhouse'?FULL_OPEN:STRAIGHT_OPEN);
  else if(current==='fullhouse')refRun(phase==='flop-bet'?FULL_FLOP:phase==='turn-bet'?FULL_TURN:FULL_ALL_IN,refPrompt.time);
@@ -169,18 +169,18 @@ setActions=function(){
  showTurn(8);busy=false;ui.fold.disabled=ui.primary.disabled=ui.secondary.disabled=false;
  ui.fold.textContent='Fold';ui.primary.classList.remove('recommended');ui.secondary.classList.remove('recommended');
  if(stage===0&&history.length===0){
-  ui.primary.textContent='Play';ui.secondary.textContent='Raise';if(refActive)ui.primary.classList.add('recommended');ui.instruction.textContent='Your hand is ready';
+  ui.primary.textContent='Play';ui.secondary.textContent='Raise';ui.fold.disabled=ui.secondary.disabled=true;if(refActive)ui.primary.classList.add('recommended');ui.instruction.textContent='Your hand is ready';
  }else if(facing>0){
   const raised=refActive&&refPrompt?.action==='allin'?(roundPaid[8]||0)+stack:raiseTarget();
   ui.primary.textContent='Call';ui.secondary.textContent=refActive&&refPrompt?.action==='allin'?'All in':'Raise';
   ui.instruction.textContent=(refActive?'Facing ':'Call ')+fmt(Math.min(stack,facing))+' · '+(ui.secondary.textContent==='All in'?'All in '+fmt(stack):'Raise to '+fmt(raised));
-  ui.secondary.disabled=raised<=target||(!refActive&&raises>=2);
+  ui.secondary.disabled=raised<=target||!canRaiseSeat(8);
   if(refActive)ui.secondary.classList.add('recommended');
  }else{
   const amount=refActive&&refPrompt?refPrompt.amount:effectiveTarget(betSize());
   ui.primary.textContent='Check';ui.secondary.textContent=amount>=stack?'All in':'Bet';
-  ui.secondary.disabled=!(amount>0);
-  const handHint=current==='fullhouse'?'Three of a Kind':stage===1?'High Card':'Straight';
+  ui.secondary.disabled=!(amount>0)||!canRaiseSeat(8);
+  const handHint=heroEvaluation()?.name||'';
   ui.instruction.textContent=handHint+' · '+(refActive?(refPrompt?.action==='check'?'Check':'Bet '+fmt(amount)):(amount>0?'Bet '+fmt(amount)+' or check':'Check'));
   if(refActive)(refPrompt?.action==='check'?ui.primary:ui.secondary).classList.add('recommended');
  }

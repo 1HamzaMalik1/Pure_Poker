@@ -69,3 +69,44 @@ header{justify-content:flex-end}
 .s0 .bubble,.s1 .bubble,.s3 .bubble,.s5 .bubble{left:7px;top:-10px}
 .s2 .bubble{left:82px;top:35px}.s4 .bubble{left:86px;top:35px}.s6 .bubble{left:78px;top:35px}.s7 .bubble{left:0;top:35px}
 @media(min-aspect-ratio:3/2){.actions{left:285px;right:40px;top:280px;height:52px}.action{height:52px;line-height:50px;font-size:15px;border-radius:14px}.buttons{gap:10px}.instruction{bottom:64px;font-size:13px;line-height:18px}}
+
+/* Yellow titles, made-hand glow, payout burst and green end card in Pure_Poker.mp4. */
+.street-title{position:absolute;top:87px;left:60px;right:60px;text-align:center;color:#fff43a;font-size:21px;font-weight:900;letter-spacing:3px;text-shadow:0 0 9px #ffc80080;z-index:9;pointer-events:none}
+.street-enter{animation:street-title-in .38s both}
+@keyframes street-title-in{from{opacity:0;transform:translateY(-9px) scale(.9)}to{opacity:1;transform:none}}
+.pre-deal .hole{visibility:hidden}
+.hole .opening-card{animation:hole-deal .75s both;animation-delay:var(--opening-delay);transform-origin:center}
+.opening-card .card-inner{animation:card-turnover .45s both;animation-delay:calc(var(--opening-delay) + .3s)}
+@keyframes hole-deal{0%{opacity:0;translate:-65px -250px;scale:.65}22%{opacity:1}100%{opacity:1;translate:0 0;scale:1}}
+.card.best{outline:2px solid #fff52f;outline-offset:1px;filter:drop-shadow(0 0 4px #ffdc1bcc)}
+.made-hand-effect{position:absolute;left:0;right:0;top:447px;text-align:center;color:#fff735;font-size:46px;font-weight:900;letter-spacing:1px;text-shadow:0 2px 1px #7a5a00,0 0 20px #fbc900b0;z-index:11;pointer-events:none;opacity:0}
+.made-enter{animation:made-hand-in 1.5s both}
+@keyframes made-hand-in{0%{opacity:0;transform:scale(1.7)}16%,65%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1.05)}}
+.made-hand .seat.folded{opacity:.42}
+.win-rays{position:absolute;left:-130px;top:290px;width:660px;height:660px;pointer-events:none;z-index:1;opacity:0;background:repeating-conic-gradient(from 5deg at 50% 67%,#fff43770 0deg 8deg,transparent 8deg 20deg);mask-image:radial-gradient(ellipse,#000 5%,#0009 30%,transparent 68%)}
+.win-burst .win-rays{animation:win-light 2.3s both}
+.win-burst .street-title{font-size:30px;letter-spacing:1px;animation:street-title-in .35s both}
+.win-burst .win-amount{color:#fff737;font-size:29px;text-shadow:0 0 12px #d4b000}
+@keyframes win-light{0%{opacity:0;transform:scale(.4)}20%,75%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1.15)}}
+.end{inset:0;height:auto;display:flex;justify-content:center;gap:17px;background:radial-gradient(ellipse at 50% 29%,#8c9d14 0%,#074d31 26%,#012016 50%,#000 83%);z-index:25;padding:24px}
+.end-fan{position:relative;width:190px;height:120px;margin:10px 0 15px}
+.end-fan .card{position:absolute;left:65px;top:20px;width:58px;height:80px;transform:translateX(calc(var(--fan) * 30px)) rotate(calc(var(--fan) * 12deg));transform-origin:50% 120%;animation:fan-in .7s both;animation-delay:calc((var(--fan) + 2) * .08s)}
+@keyframes fan-in{from{opacity:0;translate:0 60px;scale:.5}to{opacity:1;translate:0 0;scale:1}}
+.end-logo{display:flex;gap:7px;align-items:center;height:36px;filter:brightness(0) invert(1)}
+.end-logo img:first-child{width:28px;height:34px}.end-logo img:last-child{width:69px;height:29px}
+.end p{display:block;font-size:11px;margin:0 0 8px;color:white;text-align:center;line-height:18px}
+.end .install{width:204px;height:44px;background:linear-gradient(#21d8ff,#007df7);border-radius:25px;color:white;font-size:14px;letter-spacing:.5px;box-shadow:0 0 20px #00c9ff40}
+.end .replay{background:transparent;border:1px solid #ffffff3b;font-size:11px;padding:8px 20px}
+@media(min-aspect-ratio:3/2){.end{inset:0;height:auto;gap:9px}.end-fan{height:104px;margin:0}.end p{margin:0}.end .install{height:39px}.end .replay{font-size:10px;padding:5px 17px}}
+.seat.folded{opacity:.4}.seat.folded .avatar>img{filter:none}.hand-name.strong{color:#fff535;letter-spacing:1px;text-decoration:underline;text-underline-offset:4px}
+.card.best:after{content:'✦';position:absolute;right:-7px;bottom:-8px;font-size:16px;line-height:16px;color:#fffbd5;text-shadow:0 0 8px #ffff8a;animation:card-sparkle 1.3s infinite}
+@keyframes card-sparkle{0%,100%{opacity:.2;scale:.55;rotate:0deg}50%{opacity:1;scale:1;rotate:50deg}}
+.arena *,.end *{animation-play-state:var(--chip-motion,running)}
+.victory .actions{visibility:hidden}
+.victory .made-hand-effect{font-size:40px;animation:victory-hand .5s both;letter-spacing:1px}
+@keyframes victory-hand{from{opacity:0;transform:scale(1.35)}to{opacity:1;transform:scale(1)}}
+.victory .hero-seat .plate-art{filter:drop-shadow(0 0 8px #ffe531)}
+.victory .hero-seat .avatar{filter:drop-shadow(0 0 10px #ffdc3270)}
+.victory .hand-name.win{visibility:hidden}
+.victory .win-amount{top:508px;font-size:32px;color:#fff735;text-shadow:0 0 12px #e3bf15;animation:victory-amount .6s both}
+@keyframes victory-amount{0%{opacity:0;transform:translateY(24px) scale(.7)}65%{opacity:1;transform:translateY(-3px) scale(1.12)}100%{opacity:1;transform:translateY(0) scale(1)}}

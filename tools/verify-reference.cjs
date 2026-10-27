@@ -1,7 +1,14 @@
 const {chromium}=require('C:/Users/Ayesha Munir/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
 const fs=require('fs'),assert=require('assert/strict');
 const origin={straight:{pot:7.5,stack:483.25,opponents:[265.5,208,316.52,304.5,665.97,221,261,42]},fullhouse:{pot:4.5,stack:141,opponents:[50,61,96,101.5,142,384.5,108,176]}};
-function balance(s){const o=origin[s.scenario],opPaid=o.opponents.reduce((a,n,i)=>a+n-s.opponentStacks[i],0);assert.ok(Math.abs(s.pot-o.pot-s.invested-opPaid)<1e-6);assert.ok(Math.abs(s.stack-(o.stack-s.invested+(s.settled?s.pot:0)))<1e-6);assert.ok(s.stack>=0&&s.opponentStacks.every(n=>n>=0));}
+function balance(s){
+ const o=origin[s.scenario],initial=s.scenario==='straight'?{0:1,2:.5,5:1,8:5}:{5:.5,7:1,8:3};
+ const contributed=Object.values(s.contributions).reduce((a,n)=>a+n,0);assert.ok(Math.abs(contributed-s.pot)<1e-6,'Pot equals all contributions');
+ const awards=s.settlement?.awards||{};assert.ok(Math.abs(s.stack-(o.stack-s.invested+(awards[8]||0)))<1e-6,'Hero credit matches evaluated pot awards');
+ o.opponents.forEach((n,i)=>assert.ok(Math.abs(s.opponentStacks[i]-(n-(s.contributions[i]||0)+(initial[i]||0)+(awards[i]||0)))<1e-6,'Opponent account balances'));
+ assert.ok(s.stack>=0&&s.opponentStacks.every(n=>n>=0));
+}
+
 (async()=>{
  const browser=await chromium.launch({channel:'chrome',headless:true}),checks=[],results=[];
  async function pageFor(name,viewport={width:400,height:870},host=false){
@@ -54,7 +61,7 @@ function balance(s){const o=origin[s.scenario],opPaid=o.opponents.reduce((a,n,i)
   await page.screenshot({path:'deliverables/reference-'+name+'-corrected-end.png'});
   assert.deepEqual(errors,[]);assert.equal(requests.length,1,'Single HTML with no external assets');
   results.push({scenario:state.scenario,payments,events,finalPot:state.pot,finalStack:state.stack});checks.push({scenario:name,referenceSequence:'pass',amounts:'pass',riverAndPayout:'pass',result:'pass'});
-  await page.locator('#replay').click();assert.equal(await page.evaluate(()=>PurePoker.getState().stage),0);assert.equal(await page.evaluate(()=>PurePoker.getState().scenario),state.scenario,'Replay keeps the corresponding reference hand');await page.locator('#fold').click();assert.ok(await page.locator('#end').isVisible());await context.close();
+  await page.locator('#replay').click();assert.equal(await page.evaluate(()=>PurePoker.getState().stage),0);assert.equal(await page.evaluate(()=>PurePoker.getState().scenario),state.scenario,'Replay keeps the corresponding reference hand');await page.locator('#primary').click();await page.clock.runFor(100);await advance(page);await page.locator('#fold').click();assert.ok(await page.locator('#end').isVisible());await context.close();
  }
  for(const viewport of [{width:320,height:480},{width:390,height:844},{width:844,height:390},{width:1024,height:768}]){
   const {page,context}=await pageFor('full-house',viewport);await page.waitForFunction(()=>window.PurePoker);
@@ -65,8 +72,8 @@ function balance(s){const o=origin[s.scenario],opPaid=o.opponents.reduce((a,n,i)
  }
  for(const name of ['full-house','straight']){
   const {page,context,errors}=await pageFor(name);await page.waitForFunction(()=>window.PurePoker);
-  await page.locator('#secondary').click();await page.clock.runFor(100);await advance(page);
-  assert.equal(await page.evaluate(()=>PurePoker.getState().gameplayMode),'varied','Alternative opening raise enters varied betting');
+  await page.locator('#primary').click();await page.clock.runFor(100);await advance(page);await page.locator(name==='straight'?'#secondary':'#primary').click();await page.clock.runFor(100);await advance(page);
+  assert.equal(await page.evaluate(()=>PurePoker.getState().gameplayMode),'varied','Alternative legal decision enters varied betting');
   const state=await complete(page);balance(state);assert.deepEqual(errors,[]);checks.push({scenario:name,alternativeBranch:'pass',result:'pass'});await context.close();
  }
  for(const phase of ['flop-bet','turn-all-in']){

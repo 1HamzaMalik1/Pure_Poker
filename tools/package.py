@@ -6,10 +6,12 @@ destination=root/'deliverables'/'Pure-Poker-AppLovin-Review.zip'
 files=[root/name for name in ['README.md','index.html','preview.html','creative.config.json','package.json','.gitignore']]
 for folder in ['src','dist','assets']:
     files.extend(p for p in (root/folder).rglob('*') if p.is_file())
-files.extend(root/'tools'/name for name in ['build.cjs','serve.cjs','verify-reference.cjs','verify-flips-audio.cjs','audio-capture.cjs','record.cjs','finalize.cjs','capture-reference-milestones.cjs','make-reference-comparisons.py','package.py'])
+files.extend(root/'tools'/name for name in ['build.cjs','serve.cjs','verify-reference.cjs','verify-poker-rules.cjs','verify-all-five-card-hands.cjs','verify-rule-branches.cjs','review-pure-motion.cjs','review-winning-motion.cjs','capture-win-animation.cjs','make-winning-gif.py','verify-flips-audio.cjs','audio-capture.cjs','record.cjs','finalize.cjs','capture-reference-milestones.cjs','make-reference-comparisons.py','package.py'])
 review_names=[
     'reference-frame-audit.md','reference-gameplay-qa.json','qa-report.json','fidelity-status.json','flips-audio-qa.json','audio-preview-validation.json','card-flip-sequence.png',
+    'poker-rules-and-motion-audit.md','poker-rules-unit-qa.json','exhaustive-hand-qa.json','rule-branch-qa.json','pure-motion-qa.json','pure-motion-opening.png','pure-motion-straight.png','pure-motion-win.png','pure-motion-endcard.png',
     'pure-poker-full-house-preview.mp4','pure-poker-straight-preview.mp4',
+    'full-house-winning-animation.webm','full-house-winning-animation.gif','winning-preview-capture.json','winning-animation-qa.json','full-house-winning-animation.png','straight-winning-animation.png',
     'full-house-recording.json','straight-recording.json',
     'corrected-reference-live-proof.png','creative-review.png',
     'reference-bet4-comparison.png','reference-raise40-comparison.png',

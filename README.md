@@ -13,6 +13,8 @@ Press Play, then use the indicated reference action at each decision to follow t
 
 The bottom buttons use the supplied red Fold, charcoal Check/Call, and blue Bet/Raise style. Labels reflect the legal action. The initial Play button starts the already-in-progress reference hand without charging the opening wager again.
 
+The initial Fold and Raise controls are disabled until the first legal decision. Betting validates minimum raises, short-all-in reopening and stack-limited calls. Showdown evaluates actual best-five hands and settles main/side pots and ties. See `deliverables/poker-rules-and-motion-audit.md` for the audit and exact pot calculations. This is a curated single-hand No-Limit Hold'em ad rather than a multi-hand multiplayer client.
+
 ## Frame audit and fidelity
 
 `deliverables/reference-frame-audit.md` records the source sequence and approximate frame-derived times. All 2,626 frames of the latest full-house video and 1,217 frames of the straight video were decoded and compared across changing gameplay regions. The per-frame audit and extracted frames remain in `reference-analysis/`; those large analysis files are not part of the review package.
@@ -23,11 +25,18 @@ The playable pauses at user decisions, so wall time depends on the user. Alterna
 
 Community cards and showdown cards use separate front and back faces with a visible back-to-face flip. Six sound effects are extracted from the supplied full-house recording and triggered by game events. The source has discrete game sounds rather than continuous music. Audio begins after the first play tap, respects mute, and pauses when the host hides the ad. Source clip times are recorded in `assets/audio/provenance.json`.
 
+The newer `Downloads/Pure_Poker.mp4` provides the opening hole-card deal, yellow street titles, made-hand glow, large STRAIGHT! title, YOU WIN! rays, and green end-card style. Its 600 frames were decoded for motion review. The earlier hand's betting amounts and requested avatar substitutions are retained.
+
+The win now keeps the hand name prominent, lights the hero nameplate, hides the decision controls, and places the payout above the hole cards. `deliverables/full-house-winning-animation.gif` is a short visual preview captured from the actual ad. Sound remains in the playable; the GIF is silent.
+
 ## Files and editing
 
 - `src/playable.html`: markup, rendering, lifecycle and MRAID integration.
 - `src/reference-hand.js`: the transcribed reference sequence and interactive decision pauses.
-- `src/opponents.js`: varied betting used for alternative choices.
+- `src/opponents.js`: shared profiles, seat helpers and base chip bookkeeping.
+- `src/poker-engine.js`: authoritative betting/turn/settlement overrides for both paths.
+- `src/poker-rules.js`: five-of-seven evaluation, side pots, ties and refunds.
+- `src/pure-motion.js`: Pure_Poker.mp4 motion presentation.
 - `src/reference.css`: table and rectangular action controls.
 - `assets/optimized/`: embedded WebP/SVG assets. Original exports and provenance are in `assets/figma/` and `assets/reference/`.
 - `deliverables/*preview.mp4`: current 1080×1920 H.264 walkthroughs with captured game audio.

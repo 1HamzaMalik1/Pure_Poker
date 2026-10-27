@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-27T10:38:09.376Z",
+  "checks": [
+    {
+      "name": "Best five of seven; royal flush",
+      "result": "pass"
+    },
+    {
+      "name": "Ace-low straight",
+      "result": "pass"
+    },
+    {
+      "name": "Highest straight from six consecutive ranks",
+      "result": "pass"
+    },
+    {
+      "name": "Two trips form the higher full house",
+      "result": "pass"
+    },
+    {
+      "name": "Flush uses five highest suited cards",
+      "result": "pass"
+    },
+    {
+      "name": "Quad kicker matters",
+      "result": "pass"
+    },
+    {
+      "name": "Duplicate card rejected",
+      "result": "pass"
+    },
+    {
+      "name": "Separate main and side-pot winners",
+      "result": "pass"
+    },
+    {
+      "name": "Folded contributors cannot win",
+      "result": "pass"
+    },
+    {
+      "name": "Board plays; exact split and odd chip clockwise",
+      "result": "pass"
+    },
+    {
+      "name": "Odd cent in contested pot goes left of dealer",
+      "result": "pass"
+    },
+    {
+      "name": "Short all-in does not reopen prior actor",
+      "result": "pass"
+    },
+    {
+      "name": "Cumulative short all-ins can reopen",
+      "result": "pass"
+    },
+    {
+      "name": "Unacted player retains raising rights",
+      "result": "pass"
+    },
+    {
+      "name": "Recorded full-house pots total 390.5",
+      "result": "pass"
+    },
+    {
+      "name": "Recorded straight includes uncalled five refund",
+      "result": "pass"
+    }
+  ]
+}

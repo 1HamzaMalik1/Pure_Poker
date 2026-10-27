@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-25T15:42:27.643Z",
+  "date": "2026-10-27T10:40:43.053Z",
   "cardFlip": {
     "startsWithBack": true,
     "twoSided": true,
@@ -13,7 +13,7 @@
   "audio": {
     "source": "Supplied reference recording",
     "decodedEffects": 6,
-    "measuredOutputRms": 0.10081203467842398,
+    "measuredOutputRms": 0.2677056330922978,
     "muting": "pass",
     "hiddenPauseResume": "pass",
     "startsAfterInteraction": "pass"

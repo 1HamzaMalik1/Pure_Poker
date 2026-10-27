@@ -64,3 +64,7 @@ Validation: `reference-gameplay-qa.json` checks the recorded contribution sequen
 ## Card motion and audio update
 
 Community cards and showdown cards now show the original back before turning face-up. The top-left settings button is removed. Six effects extracted from the supplied full-house recording follow folds, checks, chip wagers/collection, card deals and the win. There is no continuous music between these effects in the source. Audio unlocks on the first play tap, respects mute, and pauses with host visibility. `flips-audio-qa.json` verifies the back/face animation, decoded sound output, mute, pause/resume and nine unique avatars.
+
+## Rules and newer motion audit
+
+See `poker-rules-and-motion-audit.md` for the 27 October rules corrections and motion changes based on the newer `Pure_Poker.mp4`. The original reference wager sequence above remains intact. The newer ad supplies presentation effects rather than replacing the original hand amounts.

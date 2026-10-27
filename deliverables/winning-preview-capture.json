@@ -1,0 +1,8 @@
+{
+  "source": "Actual real-time browser rendering",
+  "scenario": "full-house",
+  "winAtSeconds": 40.23930004882813,
+  "previewDuration": 4.2,
+  "audio": "Animated visual preview; sound remains enabled after Play in the HTML ad",
+  "output": "deliverables/full-house-winning-animation.webm"
+}

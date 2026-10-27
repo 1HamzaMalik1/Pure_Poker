@@ -1,7 +1,8 @@
 {
-  "sourceSeconds": 30.68,
+  "sourceSeconds": 32.12,
   "playbackSpeed": 1,
   "audio": "Captured directly from the playable; original reference effects",
-  "audioOffsetSeconds": 3.718,
+  "audioOffsetSeconds": 3.6592998046875,
+  "winAtSeconds": 22.9552998046875,
   "reason": "Real-time walkthrough"
 }

@@ -5,6 +5,7 @@
   "scripts": {
     "build": "node tools/build.cjs",
     "start": "node tools/serve.cjs",
-    "test": "node tools/verify-reference.cjs"
+    "test": "node tools/verify-poker-rules.cjs && node tools/verify-reference.cjs && node tools/verify-rule-branches.cjs",
+    "test:exhaustive": "node tools/verify-all-five-card-hands.cjs"
   }
 }
