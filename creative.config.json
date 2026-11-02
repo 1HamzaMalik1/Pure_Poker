@@ -1,6 +1,7 @@
 {
-  "iosStoreUrl": "",
+  "iosStoreUrl": "https://apps.apple.com/us/app/pure-poker-mahjong/id6741335064",
   "androidStoreUrl": "",
   "scenario": "fullhouse",
-  "gameplayMode": "reference"
+  "gameplayMode": "reference",
+  "deliveryPlatform": "ios"
 }

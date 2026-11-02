@@ -1,0 +1,10 @@
+{
+  "file": "C:\\Users\\Ayesha Munir\\Documents\\GitHub\\Pure_Poker\\deliverables\\client\\Pure_Poker_AppLovin_iOS.html",
+  "bytes": 3140947,
+  "sha256": "19bea2649c5fe7768d9316d49a9ec196293c3a3ecfd51535c5ccecb6224e8e27",
+  "platform": "ios",
+  "storeUrl": "https://apps.apple.com/us/app/pure-poker-mahjong/id6741335064",
+  "createdAt": "2026-10-29T20:27:24.207Z",
+  "specification": "https://support.applovin.com/en/growth/promoting-your-apps/welcome-to-applovin/creative-specs-and-guidelines",
+  "validation": "Run verify-applovin-delivery.cjs against this exact file"
+}

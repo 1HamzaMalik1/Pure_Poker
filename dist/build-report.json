@@ -1,24 +1,29 @@
 {
-  "builtAt": "2026-10-27T11:02:26.201Z",
+  "builtAt": "2026-10-29T20:27:24.136Z",
   "files": [
     {
       "file": "index.html",
-      "bytes": 3140935,
+      "bytes": 3140947,
       "scenario": "fullhouse"
     },
     {
       "file": "pure-poker-straight.html",
-      "bytes": 3140934,
+      "bytes": 3140946,
       "scenario": "straight"
     },
     {
       "file": "pure-poker-full-house.html",
-      "bytes": 3140935,
+      "bytes": 3140947,
       "scenario": "fullhouse"
     }
   ],
   "externalAssets": 0,
-  "storeLinksConfigured": false,
+  "deliveryPlatform": "ios",
+  "storeLinksConfigured": true,
+  "storeDestinations": {
+    "ios": "https://apps.apple.com/us/app/pure-poker-mahjong/id6741335064",
+    "android": null
+  },
   "specification": "https://support.applovin.com/en/growth/promoting-your-apps/welcome-to-applovin/creative-specs-and-guidelines",
-  "releaseStatus": "Store links required before campaign upload"
+  "releaseStatus": "Ready for local delivery validation; AppLovin host/device preview outstanding"
 }

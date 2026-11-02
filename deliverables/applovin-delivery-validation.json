@@ -1,0 +1,99 @@
+{
+  "validatedAt": "2026-10-29T20:21:38.284Z",
+  "file": "C:\\Users\\Ayesha Munir\\Documents\\GitHub\\Pure_Poker\\deliverables\\client\\Pure_Poker_AppLovin_iOS.html",
+  "bytes": 3141016,
+  "sha256": "b5f48f8ba2f930dcb625ea55f943b09be78d987a295db870d00ae3426a6444d6",
+  "platform": "ios",
+  "storeUrl": "https://apps.apple.com/us/app/pure-poker-mahjong/id6741335064",
+  "specification": "https://support.applovin.com/en/growth/promoting-your-apps/welcome-to-applovin/creative-specs-and-guidelines",
+  "checks": [
+    {
+      "name": "Single HTML below 5 MB, inline styles/scripts/assets, no iframe",
+      "result": "pass",
+      "details": {
+        "bytes": 3141016
+      }
+    },
+    {
+      "name": "No JavaScript DOM/layout or unsafe MRAID calls before ready",
+      "result": "pass"
+    },
+    {
+      "name": "No gameplay/audio before visible and first interaction",
+      "result": "pass"
+    },
+    {
+      "name": "Hidden/closed ad pauses game and sound; late viewable event cannot reopen audio",
+      "result": "pass"
+    },
+    {
+      "name": "Complete hand with exact payout and one deliberate mraid.open to client App Store URL",
+      "result": "pass"
+    },
+    {
+      "name": "Install cannot fire while closed",
+      "result": "pass"
+    },
+    {
+      "name": "Offline run: zero HTTP requests and zero JavaScript errors",
+      "result": "pass"
+    },
+    {
+      "name": "Controls and end-card CTA fit 320x480",
+      "result": "pass",
+      "details": {
+        "imagesDecoded": true,
+        "elapsedMs": 996
+      }
+    },
+    {
+      "name": "Controls and end-card CTA fit 390x844",
+      "result": "pass",
+      "details": {
+        "imagesDecoded": true,
+        "elapsedMs": 1067
+      }
+    },
+    {
+      "name": "Controls and end-card CTA fit 768x1024",
+      "result": "pass",
+      "details": {
+        "imagesDecoded": true,
+        "elapsedMs": 1011
+      }
+    },
+    {
+      "name": "Controls and end-card CTA fit 844x390",
+      "result": "pass",
+      "details": {
+        "imagesDecoded": true,
+        "elapsedMs": 1158
+      }
+    },
+    {
+      "name": "Controls and end-card CTA fit 1024x768",
+      "result": "pass",
+      "details": {
+        "imagesDecoded": true,
+        "elapsedMs": 1086
+      }
+    },
+    {
+      "name": "iPad desktop-style user agent opens the configured Apple App Store",
+      "result": "pass"
+    },
+    {
+      "name": "Standalone file opens without a server or network",
+      "result": "pass"
+    },
+    {
+      "name": "Android MRAID host uses the same supplied App Store URL and has one CTA",
+      "result": "pass"
+    },
+    {
+      "name": "Android standalone browser navigates to the App Store only after PLAY NOW",
+      "result": "pass"
+    }
+  ],
+  "actualAppLovinDevicePreview": "Not performed; local SDK simulations are not AppLovin approval"
+}

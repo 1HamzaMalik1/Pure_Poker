@@ -61,7 +61,7 @@ function balance(s){
   await page.screenshot({path:'deliverables/reference-'+name+'-corrected-end.png'});
   assert.deepEqual(errors,[]);assert.equal(requests.length,1,'Single HTML with no external assets');
   results.push({scenario:state.scenario,payments,events,finalPot:state.pot,finalStack:state.stack});checks.push({scenario:name,referenceSequence:'pass',amounts:'pass',riverAndPayout:'pass',result:'pass'});
-  await page.locator('#replay').click();assert.equal(await page.evaluate(()=>PurePoker.getState().stage),0);assert.equal(await page.evaluate(()=>PurePoker.getState().scenario),state.scenario,'Replay keeps the corresponding reference hand');await page.locator('#primary').click();await page.clock.runFor(100);await advance(page);await page.locator('#fold').click();assert.ok(await page.locator('#end').isVisible());await context.close();
+  assert.equal(await page.locator('#replay').count(),0,'No replay control on the client end card');await context.close();
  }
  for(const viewport of [{width:320,height:480},{width:390,height:844},{width:844,height:390},{width:1024,height:768}]){
   const {page,context}=await pageFor('full-house',viewport);await page.waitForFunction(()=>window.PurePoker);
@@ -93,5 +93,5 @@ function balance(s){
   checks.push({mraid:'ready, hidden pause, resume, no first-tap redirect',result:'pass'});await context.close();
  }
  await browser.close();fs.writeFileSync('deliverables/reference-gameplay-qa.json',JSON.stringify({date:new Date().toISOString(),checks,footage:'WhatsApp Video 2026-10-25 at 1.15.25 PM.mp4 and IMG_3768.mp4',results},null,2));
- fs.writeFileSync('deliverables/qa-report.json',JSON.stringify({date:new Date().toISOString(),checks,pending:['Actual store URLs','AppLovin host/device validation','Pixel-identical art and motion not claimed']},null,2));console.log(JSON.stringify(checks,null,2));
+ fs.writeFileSync('deliverables/qa-report.json',JSON.stringify({date:new Date().toISOString(),checks,deliveryPlatform:'ios',storeUrl:'https://apps.apple.com/us/app/pure-poker-mahjong/id6741335064',pending:['AppLovin host/device validation','Pixel-identical art and motion not claimed']},null,2));console.log(JSON.stringify(checks,null,2));
 })().catch(e=>{console.error(e);process.exit(1);});

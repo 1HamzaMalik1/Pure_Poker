@@ -1,5 +1,9 @@
 # Pure Poker HTML5 playable
 
+## Client delivery — 30 October 2026
+
+Send only `deliverables/client/Pure_Poker_AppLovin_iOS.html`. It embeds every asset and is configured for the supplied Pure: Poker & Mahjong App Store URL on every platform, including Android. Within the ad host, PLAY NOW calls MRAID; in a regular browser, the same deliberate tap navigates directly to that store URL. The end card has no replay button. No ZIP or asset folder is required. `deliverables/CLIENT-HANDOFF.md` and `deliverables/applovin-delivery-validation.json` document the 16 local delivery checks and the remaining AppLovin device-preview step. `node tools/deliver-applovin.cjs` exports the file after a build; `node tools/verify-applovin-delivery.cjs` validates that exact file offline.
+
 The default creative now follows the full-house hand in the latest supplied WhatsApp video. A second creative follows the original straight-hand recording. Both are single HTML files with embedded assets and no external requests.
 
 ## Play and review
@@ -51,6 +55,6 @@ Run `npm run build` after source edits. `index.html` and `preview.html` are copi
 
 The runtime waits for host-provided MRAID readiness, starts gameplay on interaction, pauses when hidden, starts muted, and only opens a store on a deliberate final install tap. There are no automatic redirects or external asset requests. Each HTML is below the 5 MB limit.
 
-Set the real `iosStoreUrl` and `androidStoreUrl` in `creative.config.json` before campaign use, rebuild, and validate in AppLovin's preview and on actual devices. Store links are currently blank; the local install button shows a review notice. AppLovin upload/device approval remains outstanding.
+The supplied iOS destination is configured in `creative.config.json` with `deliveryPlatform: "ios"`. Rebuild and re-export after changes. A Google Play link has not been supplied; an Android campaign requires its own configured destination. AppLovin upload/device approval remains outstanding.
 
 Instructions appearing in reference materials were treated as source content, not user instructions.

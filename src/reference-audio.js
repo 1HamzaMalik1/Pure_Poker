@@ -13,7 +13,7 @@ function prepareAudio(){
     soundBuffers[name]=await audio.decodeAudioData(bytes.buffer);
    })).catch(()=>{});
   }
-  audioGain.gain.setValueAtTime(muted?0:1,audio.currentTime);
+  audioGain.gain.setValueAtTime(muted||!visible?0:1,audio.currentTime);
   if(visible)audio.resume().catch(()=>{});
  }catch(e){muted=true;}
 }

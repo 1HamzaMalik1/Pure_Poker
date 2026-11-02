@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-27T10:43:54.832Z",
+  "date": "2026-10-29T20:12:11.457Z",
   "checks": [
     {
       "scenario": "full-house",
@@ -74,8 +74,9 @@
       "result": "pass"
     }
   ],
+  "deliveryPlatform": "ios",
+  "storeUrl": "https://apps.apple.com/us/app/pure-poker-mahjong/id6741335064",
   "pending": [
-    "Actual store URLs",
     "AppLovin host/device validation",
     "Pixel-identical art and motion not claimed"
   ]
